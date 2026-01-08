@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inova Soluções Tecnológicas - Integradora de TI</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #1a1a1a; background: #fff; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; border-bottom: 1px solid #e5e5e5; padding: 20px 0; position: sticky; top: 0; z-index: 100; }
+        .header-content { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 24px; font-weight: bold; color: #0066cc; }
+        nav { display: flex; gap: 30px; }
+        nav a { text-decoration: none; color: #1a1a1a; font-weight: 500; transition: color 0.3s; }
+        nav a:hover { color: #0066cc; }
+        .hero { background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); color: white; padding: 100px 20px; text-align: center; min-height: 600px; display: flex; align-items: center; justify-content: center; }
+        .hero-content { max-width: 800px; }
+        .hero h1 { font-size: 48px; margin-bottom: 20px; font-weight: bold; }
+        .hero-highlight { background: linear-gradient(90deg, #0066cc, #00cc88); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .hero p { font-size: 18px; margin-bottom: 30px; opacity: 0.9; }
+        .cta-button { display: inline-block; background: #0066cc; color: white; padding: 15px 40px; text-decoration: none; border-radius: 4px; font-weight: bold; transition: background 0.3s; margin-right: 15px; border: 2px solid #0066cc; }
+        .cta-button:hover { background: #0052a3; }
+        .cta-button-secondary { background: transparent; color: white; border: 2px solid white; }
+        .cta-button-secondary:hover { background: white; color: #1a1a1a; }
+        .stats { background: #0066cc; color: white; padding: 40px 20px; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; text-align: center; }
+        .stat-item h3 { font-size: 36px; margin-bottom: 10px; }
+        .stat-item p { font-size: 14px; opacity: 0.9; }
+        .features { padding: 80px 20px; background: #f9f9f9; }
+        .section-title { font-size: 36px; margin-bottom: 50px; text-align: center; font-weight: bold; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .feature-card { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s, box-shadow 0.3s; }
+        .feature-card:hover { transform: translateY(-5px); box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15); }
+        .feature-icon { font-size: 40px; margin-bottom: 15px; }
+        .feature-card h3 { font-size: 20px; margin-bottom: 10px; color: #1a1a1a; }
+        .feature-card p { color: #666; font-size: 14px; }
+        .about { padding: 80px 20px; background: white; }
+        .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+        .about h2 { font-size: 36px; margin-bottom: 20px; font-weight: bold; }
+        .about p { margin-bottom: 15px; color: #666; line-height: 1.8; }
+        .about-list { list-style: none; margin-top: 20px; }
+        .about-list li { padding: 10px 0; padding-left: 30px; position: relative; color: #666; }
+        .about-list li:before { content: "✓"; position: absolute; left: 0; color: #0066cc; font-weight: bold; }
+        .contact { background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); color: white; padding: 80px 20px; text-align: center; }
+        .contact h2 { font-size: 36px; margin-bottom: 20px; }
+        .contact p { font-size: 18px; margin-bottom: 30px; opacity: 0.9; }
+        footer { background: #1a1a1a; color: white; padding: 40px 20px; text-align: center; border-top: 1px solid #333; }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-bottom: 30px; text-align: left; }
+        .footer-section h4 { margin-bottom: 15px; font-size: 16px; }
+        .footer-section a { display: block; color: #999; text-decoration: none; margin-bottom: 8px; font-size: 14px; }
+        .footer-section a:hover { color: #0066cc; }
+        .footer-bottom { border-top: 1px solid #333; padding-top: 20px; color: #999; font-size: 14px; }
+        @media (max-width: 768px) { nav { display: none; } .hero h1 { font-size: 32px; } .about-content { grid-template-columns: 1fr; } .stats-grid { grid-template-columns: repeat(2, 1fr); } .section-title { font-size: 28px; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">INOVA</div>
+                <nav>
+                    <a href="#home">Home</a>
+                    <a href="#solucoes">Soluções</a>
+                    <a href="#sobre">Sobre</a>
+                    <a href="#contato">Contato</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>SUA EMPRESA <br><span class="hero-highlight">MAIS PRODUTIVA E SEGURA</span></h1>
+            <p>Deixe a complexidade da TI com a gente. Somos uma integradora de soluções que cuida da sua infraestrutura, segurança e suporte para que você foque apenas no crescimento do seu negócio.</p>
+            <a href="https://wa.me/554933193900" target="_blank" class="cta-button">Falar com Consultor</a>
+            <a href="#solucoes" class="cta-button cta-button-secondary">Conhecer Soluções</a>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>33+</h3>
+                    <p>Anos de Experiência</p>
+                </div>
+                <div class="stat-item">
+                    <h3>2.500+</h3>
+                    <p>Projetos Entregues</p>
+                </div>
+                <div class="stat-item">
+                    <h3>50+</h3>
+                    <p>Especialistas</p>
+                </div>
+                <div class="stat-item">
+                    <h3>24/7</h3>
+                    <p>Suporte Técnico</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" id="solucoes">
+        <div class="container">
+            <h2 class="section-title">NOSSOS PILARES</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Segurança</h3>
+                    <p>Proteção completa da sua infraestrutura com as melhores práticas de segurança da indústria.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚙️</div>
+                    <h3>Infraestrutura</h3>
+                    <p>Soluções robustas e escaláveis para sua empresa crescer sem limitações tecnológicas.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📞</div>
+                    <h3>Suporte 24/7</h3>
+                    <p>Equipe especializada disponível o tempo todo para resolver qualquer problema.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">☁️</div>
+                    <h3>Cloud Solutions</h3>
+                    <p>Migração e gerenciamento de infraestrutura em nuvem com segurança e eficiência.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔧</div>
+                    <h3>Consultoria</h3>
+                    <p>Orientação especializada para otimizar sua estratégia de TI e reduzir custos.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Análise e Relatórios</h3>
+                    <p>Dados detalhados sobre o desempenho da sua infraestrutura para melhor tomada de decisão.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="sobre">
+        <div class="container">
+            <div class="about-content">
+                <div>
+                    <h2>Sobre a INOVA</h2>
+                    <p>Com mais de 33 anos de experiência no mercado de tecnologia, a INOVA é uma integradora de soluções que atua como parceira estratégica das empresas na transformação digital.</p>
+                    <p>Nosso objetivo é simplificar a complexidade da TI, permitindo que você foque no que realmente importa: o crescimento do seu negócio.</p>
+                    <ul class="about-list">
+                        <li>Expertise comprovada em infraestrutura</li>
+                        <li>Segurança em primeiro lugar</li>
+                        <li>Suporte técnico 24/7</li>
+                        <li>Soluções personalizadas</li>
+                        <li>Parceria de longo prazo</li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/400x300?text=Sobre+INOVA" alt="Sobre INOVA" style="width: 100%; border-radius: 8px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contato">
+        <div class="container">
+            <h2>Vamos Conversar?</h2>
+            <p>Entre em contato conosco para conhecer como podemos ajudar sua empresa.</p>
+            <a href="https://wa.me/554933193900" target="_blank" class="cta-button">Falar com Consultor</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>INOVA</h4>
+                    <a href="#home">Home</a>
+                    <a href="#solucoes">Soluções</a>
+                    <a href="#sobre">Sobre</a>
+                    <a href="#contato">Contato</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Soluções</h4>
+                    <a href="#solucoes">Segurança</a>
+                    <a href="#solucoes">Infraestrutura</a>
+                    <a href="#solucoes">Cloud</a>
+                    <a href="#solucoes">Consultoria</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <a href="tel:554933193900">(54) 3319-3900</a>
+                    <a href="https://wa.me/554933193900">WhatsApp</a>
+                    <a href="mailto:contato@inova.com.br">contato@inova.com.br</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 INOVA Soluções Tecnológicas. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
