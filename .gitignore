@@ -1,0 +1,17 @@
+node_modules
+dist
+.local
+.cache
+.config
+.npm
+.pnpm-store
+upload
+Downloads
+site_preview
+site_final
+site_final_v2
+site_correcoes
+site_v3
+site_v4
+site_v5
+site_v6
