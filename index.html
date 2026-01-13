@@ -83,6 +83,114 @@ Error generating stack: `+l.message+`
       defer
       src="%VITE_ANALYTICS_ENDPOINT%/umami"
       data-website-id="%VITE_ANALYTICS_WEBSITE_ID%"></script>
-  </body>
+  
+<script>
+// Script para aumentar logos e corrigir espaços vazios
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+        // Aumentar todas as imagens com 'logo' ou 'inova' no alt
+        const allImages = document.querySelectorAll('img');
+        allImages.forEach(img => {
+            const alt = (img.alt || '').toLowerCase();
+            const src = (img.src || '').toLowerCase();
+            
+            // Logos da INOVA no header
+            if ((alt.includes('inova') || alt.includes('logo')) && img.closest('header')) {
+                img.style.width = '180px !important';
+                img.style.height = 'auto !important';
+                img.style.maxWidth = '200px !important';
+            }
+            // Logos da INOVA no footer
+            else if ((alt.includes('inova') || alt.includes('logo')) && img.closest('footer')) {
+                img.style.width = '150px !important';
+                img.style.height = 'auto !important';
+                img.style.maxWidth = '180px !important';
+            }
+            // Logos dos clientes
+            else if (src.includes('clientes/') || src.includes('logos/')) {
+                img.style.width = '90% !important';
+                img.style.height = '90% !important';
+                img.style.maxWidth = '100% !important';
+                img.style.maxHeight = '100% !important';
+                img.style.objectFit = 'contain !important';
+                
+                // Forçar o container pai a exibir a imagem
+                const parent = img.parentElement;
+                if (parent) {
+                    parent.style.display = 'flex !important';
+                    parent.style.alignItems = 'center !important';
+                    parent.style.justifyContent = 'center !important';
+                    parent.style.width = '100% !important';
+                    parent.style.height = '100% !important';
+                }
+            }
+        });
+        
+        // Forçar exibição de todos os elementos ocultos com classes de cliente
+        const allDivs = document.querySelectorAll('[class*="client"], [class*="logo"]');
+        allDivs.forEach(div => {
+            if (div.style.display === 'none') {
+                div.style.display = 'flex !important';
+            }
+        });
+    }, 500);
+});
+</script>
+
+
+<script>
+// Script para aumentar logos e corrigir espaços vazios
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+        // Aumentar todas as imagens com 'logo' ou 'inova' no alt
+        const allImages = document.querySelectorAll('img');
+        allImages.forEach(img => {
+            const alt = (img.alt || '').toLowerCase();
+            const src = (img.src || '').toLowerCase();
+            
+            // Logos da INOVA no header
+            if ((alt.includes('inova') || alt.includes('logo')) && img.closest('header')) {
+                img.style.width = '180px !important';
+                img.style.height = 'auto !important';
+                img.style.maxWidth = '200px !important';
+            }
+            // Logos da INOVA no footer
+            else if ((alt.includes('inova') || alt.includes('logo')) && img.closest('footer')) {
+                img.style.width = '150px !important';
+                img.style.height = 'auto !important';
+                img.style.maxWidth = '180px !important';
+            }
+            // Logos dos clientes
+            else if (src.includes('clientes/') || src.includes('logos/')) {
+                img.style.width = '90% !important';
+                img.style.height = '90% !important';
+                img.style.maxWidth = '100% !important';
+                img.style.maxHeight = '100% !important';
+                img.style.objectFit = 'contain !important';
+                
+                // Forçar o container pai a exibir a imagem
+                const parent = img.parentElement;
+                if (parent) {
+                    parent.style.display = 'flex !important';
+                    parent.style.alignItems = 'center !important';
+                    parent.style.justifyContent = 'center !important';
+                    parent.style.width = '100% !important';
+                    parent.style.height = '100% !important';
+                }
+            }
+        });
+        
+        // Forçar exibição de todos os elementos ocultos com classes de cliente
+        const allDivs = document.querySelectorAll('[class*="client"], [class*="logo"]');
+        allDivs.forEach(div => {
+            if (div.style.display === 'none') {
+                div.style.display = 'flex !important';
+            }
+        });
+    }, 500);
+});
+</script>
+
+</body>
 
 </html>
