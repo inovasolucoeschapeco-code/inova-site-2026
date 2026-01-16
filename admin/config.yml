@@ -20,7 +20,6 @@ backend:
                                                           - {label: "Resultado", name: "result", widget: "text"}
                                                                 - {label: "Imagem", name: "image", widget: "image"}
                                                                       - {label: "Tags", name: "tags", widget: "list"}
-
                                                                         - name: "testimonials"
                                                                             label: "Depoimentos"
                                                                                 folder: "content/testimonials"
@@ -29,7 +28,6 @@ backend:
                                                                                               - {label: "Nome", name: "name", widget: "string"}
                                                                                                     - {label: "Cargo", name: "role", widget: "string"}
                                                                                                           - {label: "Texto", name: "quote", widget: "text"}
-                                                                                                          
                                                                                                             - name: "logos"
                                                                                                                 label: "Logos dos Clientes"
                                                                                                                     folder: "public/clientes"
