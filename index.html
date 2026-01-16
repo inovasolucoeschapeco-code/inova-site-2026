@@ -10,83 +10,26 @@
     <script type="module" crossorigin src="/assets/index-CHZnMM-a.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-9E2ICvO3.css">
     <style>
-      /* ============================================
-         CORREÇÃO DEFINITIVA - LOGOS INOVA
-         Versão 3.0 - CSS Super Agressivo
-         ============================================ */
+      /* CSS Simples para Logos - Versão 4.0 */
       
-      /* LOGO DA INOVA NO HEADER - FORÇAR TAMANHO GRANDE */
-      header img[alt*="Inova"],
-      header img[src*="logo"],
-      nav img[alt*="Inova"],
-      nav img[src*="logo"],
-      .sticky img,
-      header a img,
-      nav a img,
-      [class*="header"] img,
-      [class*="nav"] img,
-      a[href="/"] img {
-        width: 200px !important;
-        height: auto !important;
-        max-width: 220px !important;
-        min-width: 180px !important;
-        object-fit: contain !important;
-        transform: scale(1.2) !important;
-        transform-origin: left center !important;
-      }
-      
-      /* LOGO DA INOVA NO FOOTER */
-      footer img,
-      [class*="footer"] img {
+      /* Logo da Inova no Header */
+      header img, nav img, a[href="/"] img {
+        min-width: 150px !important;
         width: 180px !important;
+      }
+      
+      /* Logo da Inova no Footer */
+      footer img {
+        min-width: 140px !important;
+        width: 160px !important;
+      }
+      
+      /* Logos dos Clientes - Aumentar tamanho */
+      img[src*="/clientes/"], img[alt*="Cliente"] {
+        width: 85% !important;
         height: auto !important;
-        max-width: 200px !important;
-        min-width: 160px !important;
+        max-height: 90% !important;
         object-fit: contain !important;
-      }
-      
-      /* ============================================
-         CORREÇÃO DEFINITIVA - LOGOS DOS CLIENTES
-         ============================================ */
-      
-      /* GRID DE LOGOS DOS CLIENTES - FORÇAR TAMANHO GRANDE */
-      .grid img:not([alt*="Inova"]):not([src*="logo-inova"]),
-      [class*="grid"] img:not([alt*="Inova"]):not([src*="logo-inova"]),
-      [class*="client"] img,
-      div[class*="border"] img:not([alt*="Inova"]) {
-        width: 95% !important;
-        height: auto !important;
-        max-width: 100% !important;
-        max-height: 95% !important;
-        min-width: 80% !important;
-        object-fit: contain !important;
-        display: block !important;
-        margin: auto !important;
-        padding: 5px !important;
-      }
-      
-      /* CONTAINERS DOS CLIENTES - GARANTIR ESPAÇO */
-      .grid > div,
-      [class*="grid"] > div,
-      div[class*="border"][class*="rounded"] {
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        min-height: 140px !important;
-        padding: 15px !important;
-        overflow: hidden !important;
-      }
-      
-      /* ESCONDER ELEMENTOS COM IMAGENS QUEBRADAS */
-      img[alt="Cliente 2"],
-      img[alt*="Cliente 2"] {
-        display: none !important;
-      }
-      
-      /* ESCONDER O CONTAINER DO CLIENTE 2 */
-      div:has(img[alt="Cliente 2"]),
-      div:has(img[alt*="Cliente 2"]) {
-        display: none !important;
       }
     </style>
   </head>
