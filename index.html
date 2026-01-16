@@ -10,30 +10,85 @@
     <script type="module" crossorigin src="/assets/index-CHZnMM-a.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-9E2ICvO3.css">
     <style>
-      /* CSS Simples para Logos - Versão 4.0 */
+      /* ============================================
+         CSS FINAL - LOGOS INOVA v5.0
+         ============================================ */
       
-      /* Logo da Inova no Header */
-      header img, nav img, a[href="/"] img {
-        min-width: 150px !important;
+      /* LOGO DA INOVA NO HEADER - AUMENTAR SIGNIFICATIVAMENTE */
+      header a img,
+      nav a img,
+      a[href="/"] img,
+      header img[alt*="Inova"],
+      header img[alt*="inova"],
+      nav img[alt*="Inova"],
+      nav img[alt*="inova"] {
         width: 180px !important;
-      }
-      
-      /* Logo da Inova no Footer */
-      footer img {
-        min-width: 140px !important;
-        width: 160px !important;
-      }
-      
-      /* Logos dos Clientes - Aumentar tamanho */
-      img[src*="/clientes/"], img[alt*="Cliente"] {
-        width: 85% !important;
+        min-width: 160px !important;
+        max-width: 200px !important;
         height: auto !important;
-        max-height: 90% !important;
         object-fit: contain !important;
       }
+      
+      /* LOGO DA INOVA NO FOOTER */
+      footer img,
+      footer a img {
+        width: 160px !important;
+        min-width: 140px !important;
+        max-width: 180px !important;
+        height: auto !important;
+        object-fit: contain !important;
+      }
+      
+      /* ============================================
+         LOGOS DOS CLIENTES - AUMENTAR PARA PREENCHER
+         ============================================ */
+      
+      /* Todas as imagens dentro de grids de clientes */
+      img[src*="/clientes/"],
+      img[alt*="Cliente"],
+      img[alt*="cliente"] {
+        width: 90% !important;
+        height: auto !important;
+        max-height: 85% !important;
+        min-width: 85% !important;
+        object-fit: contain !important;
+        display: block !important;
+        margin: auto !important;
+      }
+      
+      /* Containers das logos - garantir centralização */
+      div:has(> img[src*="/clientes/"]) {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 10px !important;
+      }
+      
+      /* Esconder imagens quebradas */
+      img[src*="logo_002.png"],
+      img:not([src]) {
+        display: none !important;
+      }
+      
+      /* Esconder containers com imagens quebradas */
+      div:has(> img[src*="logo_002.png"]) {
+        display: none !important;
+      }
     </style>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
   </body>
 </html>
