@@ -10,25 +10,70 @@
     <script type="module" crossorigin src="/assets/index-CHZnMM-a.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-9E2ICvO3.css">
     <style>
-      /* LOGO DA INOVA NO HEADER */
-      header img, nav img, .header img {
+      /* ============================================
+         CORREÇÃO DEFINITIVA - LOGOS INOVA
+         ============================================ */
+      
+      /* LOGO DA INOVA NO HEADER - AUMENTAR SIGNIFICATIVAMENTE */
+      header img,
+      nav img,
+      .sticky img,
+      [class*="header"] img,
+      [class*="nav"] img {
         width: 180px !important;
         height: auto !important;
         max-width: 200px !important;
-        min-width: 150px !important;
+        min-width: 160px !important;
+        object-fit: contain !important;
       }
+      
       /* LOGO DA INOVA NO FOOTER */
-      footer img {
+      footer img,
+      [class*="footer"] img {
         width: 160px !important;
         height: auto !important;
         max-width: 180px !important;
+        min-width: 140px !important;
+        object-fit: contain !important;
       }
-      /* LOGOS DOS CLIENTES */
-      .grid img, [class*="client"] img {
-        width: 85% !important;
+      
+      /* ============================================
+         CORREÇÃO DEFINITIVA - LOGOS DOS CLIENTES
+         ============================================ */
+      
+      /* GRID DE LOGOS DOS CLIENTES */
+      .grid img,
+      [class*="grid"] img,
+      [class*="client"] img,
+      [class*="logo"] img:not(header img):not(footer img):not(nav img) {
+        width: 90% !important;
         height: auto !important;
         max-width: 95% !important;
+        max-height: 90% !important;
         object-fit: contain !important;
+        display: block !important;
+        margin: auto !important;
+      }
+      
+      /* CONTAINERS DOS CLIENTES - GARANTIR ESPAÇO */
+      .grid > div,
+      [class*="grid"] > div {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        min-height: 120px !important;
+        padding: 10px !important;
+      }
+      
+      /* ESCONDER IMAGENS QUE NÃO CARREGARAM */
+      img[src=""],
+      img:not([src]) {
+        display: none !important;
+      }
+      
+      /* GARANTIR QUE IMAGENS QUEBRADAS NÃO APAREÇAM */
+      img {
+        min-width: 20px;
       }
     </style>
   </head>
