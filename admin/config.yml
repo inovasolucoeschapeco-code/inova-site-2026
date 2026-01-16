@@ -1,0 +1,40 @@
+backend:
+  name: github
+    repo: inovasolucoeschapeco-code/inova-site-2026
+      branch: main
+
+      media_folder: "public/images"
+      public_folder: "/images"
+
+      collections:
+        - name: "cases"
+            label: "Cases de Sucesso"
+                folder: "content/cases"
+                    create: true
+                        slug: "{{slug}}"
+                            fields:
+                                  - {label: "Cliente", name: "client", widget: "string"}
+                                        - {label: "Localização", name: "location", widget: "string"}
+                                              - {label: "Título", name: "title", widget: "string"}
+                                                    - {label: "Descrição", name: "description", widget: "text"}
+                                                          - {label: "Resultado", name: "result", widget: "text"}
+                                                                - {label: "Imagem", name: "image", widget: "image"}
+                                                                      - {label: "Tags", name: "tags", widget: "list"}
+
+                                                                        - name: "testimonials"
+                                                                            label: "Depoimentos"
+                                                                                folder: "content/testimonials"
+                                                                                    create: true
+                                                                                        fields:
+                                                                                              - {label: "Nome", name: "name", widget: "string"}
+                                                                                                    - {label: "Cargo", name: "role", widget: "string"}
+                                                                                                          - {label: "Texto", name: "quote", widget: "text"}
+                                                                                                          
+                                                                                                            - name: "logos"
+                                                                                                                label: "Logos dos Clientes"
+                                                                                                                    folder: "public/clientes"
+                                                                                                                        create: true
+                                                                                                                            extension: "png"
+                                                                                                                                fields:
+                                                                                                                                      - {label: "Nome do Cliente", name: "title", widget: "string"}
+                                                                                                                                            - {label: "Arquivo da Logo", name: "image", widget: "image"}
