@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: inovasolucoeschapeco-code/inova-site-2026
+  name: git-gateway
   branch: main
 
 media_folder: public/images
