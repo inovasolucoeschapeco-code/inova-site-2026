@@ -1,93 +1,124 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>Inova Soluções Tecnológicas</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <script type="module" crossorigin src="/assets/index-CHZnMM-a.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-9E2ICvO3.css">
+    <link rel="icon" type="image/svg+xml" href="/images/logo-inova.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inova Soluções - Tecnologia que Impulsiona</title>
+    
+    <!-- CSS para Logos e Ajustes Visuais -->
     <style>
-      /* ============================================
-         CSS FINAL - LOGOS INOVA v5.0
-         ============================================ */
-      
-      /* LOGO DA INOVA NO HEADER - AUMENTAR SIGNIFICATIVAMENTE */
-      header a img,
-      nav a img,
-      a[href="/"] img,
-      header img[alt*="Inova"],
-      header img[alt*="inova"],
-      nav img[alt*="Inova"],
-      nav img[alt*="inova"] {
-        width: 180px !important;
-        min-width: 160px !important;
-        max-width: 200px !important;
-        height: auto !important;
-        object-fit: contain !important;
+      /* Aumentar Logo no Header e Footer */
+      header img[src*="logo"], footer img[src*="logo"], .logo-container img {
+        height: 60px !important;
+        width: auto !important;
+        max-width: 250px !important;
       }
-      
-      /* LOGO DA INOVA NO FOOTER */
-      footer img,
-      footer a img {
-        width: 160px !important;
-        min-width: 140px !important;
-        max-width: 180px !important;
-        height: auto !important;
-        object-fit: contain !important;
-      }
-      
-      /* ============================================
-         LOGOS DOS CLIENTES - AUMENTAR PARA PREENCHER
-         ============================================ */
-      
-      /* Todas as imagens dentro de grids de clientes */
-      img[src*="/clientes/"],
-      img[alt*="Cliente"],
-      img[alt*="cliente"] {
+
+      /* Aumentar Logos dos Clientes */
+      .client-logo-grid img, img[src*="/clientes/"] {
+        max-height: 100px !important;
         width: 90% !important;
-        height: auto !important;
-        max-height: 85% !important;
-        min-width: 85% !important;
         object-fit: contain !important;
-        display: block !important;
-        margin: auto !important;
+        filter: grayscale(0%) !important;
+        transition: transform 0.3s ease;
       }
-      
-      /* Containers das logos - garantir centralização */
-      div:has(> img[src*="/clientes/"]) {
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        padding: 10px !important;
+
+      .client-logo-grid div:hover img {
+        transform: scale(1.1);
       }
-      
+
       /* Esconder imagens quebradas */
-      img[src*="logo_002.png"],
-      img:not([src]) {
+      img:error {
         display: none !important;
       }
-      
-      /* Esconder containers com imagens quebradas */
-      div:has(> img[src*="logo_002.png"]) {
-        display: none !important;
+
+      /* Estilos do Painel de Edição Simples */
+      #admin-panel {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.9);
+        z-index: 9999;
+        color: white;
+        padding: 20px;
+        overflow-y: auto;
+        font-family: sans-serif;
+      }
+      .admin-card {
+        background: #222;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        border: 1px solid #444;
+      }
+      .admin-card h3 { margin-top: 0; color: #00d1b2; }
+      .admin-input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        background: #333;
+        border: 1px solid #555;
+        color: white;
+      }
+      .admin-btn {
+        background: #00d1b2;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+      #admin-trigger {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        width: 20px;
+        height: 20px;
+        background: rgba(0,0,0,0.1);
+        cursor: pointer;
+        z-index: 10000;
       }
     </style>
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+    <script type="module" crossorigin src="/assets/index-CHZnMM-a.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-Di_m69X6.css">
   </head>
   <body>
     <div id="root"></div>
+
+    <!-- Gatilho invisível para o Admin (Canto inferior direito) -->
+    <div id="admin-trigger" onclick="toggleAdmin()"></div>
+
+    <!-- Painel de Edição -->
+    <div id="admin-panel">
+      <div style="max-width: 800px; margin: 0 auto;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <h2>Painel de Edição Inova</h2>
+          <button class="admin-btn" style="background: #ff3860;" onclick="toggleAdmin()">Fechar</button>
+        </div>
+        
+        <div class="admin-card">
+          <h3>Instruções</h3>
+          <p>Para editar qualquer texto ou imagem, você deve fazer a alteração no GitHub diretamente nos arquivos de conteúdo. Este painel serve para facilitar a visualização do que pode ser mudado.</p>
+          <p>Como o site é baseado em React estático, a edição direta aqui não salva no servidor. Para salvar permanentemente, use o GitHub.</p>
+          <a href="https://github.com/inovasolucoeschapeco-code/inova-site-2026" target="_blank" class="admin-btn" style="display: inline-block; text-decoration: none;">Ir para o GitHub</a>
+        </div>
+
+        <div class="admin-card">
+          <h3>Dica para Logos</h3>
+          <p>Para trocar uma logo de cliente, vá na pasta <strong>public/clientes</strong> no GitHub e faça o upload da nova imagem com o mesmo nome da antiga (ex: logo_002.png).</p>
+        </div>
+      </div>
+    </div>
+
     <script>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", user => {
-          if (!user) {
-            window.netlifyIdentity.on("login", () => {
-              document.location.href = "/admin/";
-            });
-          }
-        });
+      function toggleAdmin() {
+        const panel = document.getElementById('admin-panel');
+        panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
       }
     </script>
   </body>
