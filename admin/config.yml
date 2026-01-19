@@ -1,7 +1,7 @@
 backend:
-  name: github
-    repo: inovasolucoeschapeco-code/inova-site-2026
-      branch: main
+  name: "github"
+    repo: "inovasolucoeschapeco-code/inova-site-2026"
+      branch: "main"
 
       media_folder: "public/images"
       public_folder: "/images"
