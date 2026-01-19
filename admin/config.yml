@@ -32,6 +32,7 @@ collections:
     label: "Logos dos Clientes"
     folder: "public/clientes"
     create: true
+    format: "json"
     extension: "png"
     fields:
       - {label: "Nome do Cliente", name: "title", widget: "string"}
