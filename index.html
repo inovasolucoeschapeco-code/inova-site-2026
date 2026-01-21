@@ -1,125 +1,36 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!doctype html>
+<html lang="en">
+
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/images/logo-inova.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inova Soluções - Tecnologia que Impulsiona</title>
-    
-    <!-- CSS para Logos e Ajustes Visuais -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>Inova Soluções Tecnológicas</title>    
+    <script type="module" crossorigin src="/assets/index-CHZnMM-a.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-9E2ICvO3.css">
     <style>
-      /* Aumentar Logo no Header e Footer */
-      header img[src*="logo"], footer img[src*="logo"], .logo-container img {
-        height: 60px !important;
+      /* Ajuste da Logo no Header */
+      header img[src*="logo"], .nav-logo img, img[alt="Inova Logo"] {
+        height: 50px !important;
         width: auto !important;
-        max-width: 250px !important;
+        max-height: none !important;
       }
-
-      /* Aumentar Logos dos Clientes */
-      .client-logo-grid img, img[src*="/clientes/"] {
-        max-height: 100px !important;
-        width: 90% !important;
+      /* Ajuste das Logos dos Clientes */
+      .client-card img, .clientes-grid img, img[src*="/clientes/"] {
+        max-width: 90% !important;
+        max-height: 80% !important;
         object-fit: contain !important;
-        filter: grayscale(0%) !important;
-        transition: transform 0.3s ease;
+        transform: scale(1.2);
       }
-
-      .client-logo-grid div:hover img {
-        transform: scale(1.1);
-      }
-
-      /* Esconder imagens quebradas */
-      img:error {
-        display: none !important;
-      }
-
-      /* Estilos do Painel de Edição Simples */
-      #admin-panel {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0,0,0,0.9);
-        z-index: 9999;
-        color: white;
-        padding: 20px;
-        overflow-y: auto;
-        font-family: sans-serif;
-      }
-      .admin-card {
-        background: #222;
-        padding: 20px;
-        margin-bottom: 20px;
-        border-radius: 8px;
-        border: 1px solid #444;
-      }
-      .admin-card h3 { margin-top: 0; color: #00d1b2; }
-      .admin-input {
-        width: 100%;
-        padding: 10px;
-        margin: 10px 0;
-        background: #333;
-        border: 1px solid #555;
-        color: white;
-      }
-      .admin-btn {
-        background: #00d1b2;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        cursor: pointer;
-        border-radius: 4px;
-      }
-      #admin-trigger {
-        position: fixed;
-        bottom: 10px;
-        right: 10px;
-        width: 20px;
-        height: 20px;
-        background: rgba(0,0,0,0.1);
-        cursor: pointer;
-        z-index: 10000;
+      /* Garantir que o container da logo não limite o tamanho */
+      .logo-container, .header-logo {
+        width: auto !important;
       }
     </style>
-
-    <script type="module" crossorigin src="/assets/index-CHZnMM-a.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-Di_m69X6.css">
   </head>
+
   <body>
     <div id="root"></div>
-
-    <!-- Gatilho invisível para o Admin (Canto inferior direito) -->
-    <div id="admin-trigger" onclick="toggleAdmin()"></div>
-
-    <!-- Painel de Edição -->
-    <div id="admin-panel">
-      <div style="max-width: 800px; margin: 0 auto;">
-        <div style="display: flex; justify-content: space-between; align-items: center;">
-          <h2>Painel de Edição Inova</h2>
-          <button class="admin-btn" style="background: #ff3860;" onclick="toggleAdmin()">Fechar</button>
-        </div>
-        
-        <div class="admin-card">
-          <h3>Instruções</h3>
-          <p>Para editar qualquer texto ou imagem, você deve fazer a alteração no GitHub diretamente nos arquivos de conteúdo. Este painel serve para facilitar a visualização do que pode ser mudado.</p>
-          <p>Como o site é baseado em React estático, a edição direta aqui não salva no servidor. Para salvar permanentemente, use o GitHub.</p>
-          <a href="https://github.com/inovasolucoeschapeco-code/inova-site-2026" target="_blank" class="admin-btn" style="display: inline-block; text-decoration: none;">Ir para o GitHub</a>
-        </div>
-
-        <div class="admin-card">
-          <h3>Dica para Logos</h3>
-          <p>Para trocar uma logo de cliente, vá na pasta <strong>public/clientes</strong> no GitHub e faça o upload da nova imagem com o mesmo nome da antiga (ex: logo_002.png).</p>
-        </div>
-      </div>
-    </div>
-
-    <script>
-      function toggleAdmin() {
-        const panel = document.getElementById('admin-panel');
-        panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
-      }
-    </script>
   </body>
 </html>
