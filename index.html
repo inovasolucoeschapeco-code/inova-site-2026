@@ -10,22 +10,34 @@
     <script type="module" crossorigin src="/assets/index-CHZnMM-a.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-9E2ICvO3.css">
     <style>
-      /* Ajuste da Logo no Header */
-      header img[src*="logo"], .nav-logo img, img[alt="Inova Logo"] {
-        height: 50px !important;
+      /* Ajuste da Logo no Header (Colorida) */
+      header img[src*="logo"], .nav-logo img, img[alt*="Inova"] {
+        height: 75px !important;
+        width: auto !important;
+        max-height: none !important;
+        display: block !important;
+      }
+      
+      /* Ajuste da Logo no Rodapé (Branca) */
+      footer img[src*="logo"], footer img[alt*="Inova"] {
+        height: 90px !important;
         width: auto !important;
         max-height: none !important;
       }
+
       /* Ajuste das Logos dos Clientes */
       .client-card img, .clientes-grid img, img[src*="/clientes/"] {
-        max-width: 90% !important;
-        max-height: 80% !important;
+        max-width: 95% !important;
+        max-height: 90% !important;
         object-fit: contain !important;
-        transform: scale(1.2);
+        transform: scale(1.3);
       }
+      
       /* Garantir que o container da logo não limite o tamanho */
-      .logo-container, .header-logo {
+      .logo-container, .header-logo, a[href="/"] {
         width: auto !important;
+        display: flex !important;
+        align-items: center !important;
       }
     </style>
   </head>
