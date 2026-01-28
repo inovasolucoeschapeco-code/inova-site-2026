@@ -17,7 +17,7 @@ export default function Home() {
             alt="Infraestrutura de TI Inova" 
             className="w-full h-full object-cover opacity-60"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-foreground via-foreground/90 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/70 to-transparent"></div>
           
           {/* Grid Overlay */}
           <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
