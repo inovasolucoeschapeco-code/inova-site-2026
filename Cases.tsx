@@ -14,7 +14,7 @@ export default function Cases() {
       result: "Melhoria significativa na qualidade do sinal e performance da rede Wi-Fi, aplicação de políticas de acesso, segurança na autenticação, melhor gerenciamento e monitoramento, controle de acesso a visitantes e serviços de localização integrados.",
       tags: ["Wi-Fi Corporativo", "HP Aruba", "Smart Campus", "Infraestrutura de Rede"],
       image: "/images/hero-infrastructure.jpg",
-      caseUrl: "https://inovainfo.com.br/cases/unochapeco"
+      caseUrl: "/case-detail/unochapeco"
     },
     {
       client: "CELEIRO",
@@ -24,7 +24,7 @@ export default function Cases() {
       result: "Aumento na segurança, gerenciamento e monitoramento eficiente, agilidade nos processos e atendimento aos clientes, modernização completa da infraestrutura de TI.",
       tags: ["Virtualização", "Servidores HPE", "Backup Veeam", "Infraestrutura de TI"],
       image: "/images/productivity-office.jpg",
-      caseUrl: "https://inovainfo.com.br/cases/celeiro"
+      caseUrl: "/case-detail/celeiro"
     },
     {
       client: "SICOOB CREDICARÚ",
@@ -34,7 +34,7 @@ export default function Cases() {
       result: "Aumento na segurança, alta disponibilidade de dados, agilidade na recuperação, gerenciamento e monitoramento constante, eliminação do risco de transporte de discos físicos.",
       tags: ["Cloud Backup", "Alta Disponibilidade", "Replicação", "Segurança de Dados"],
       image: "/images/security-shield.jpg",
-      caseUrl: "https://inovainfo.com.br/cases/sicoob-credicaru"
+      caseUrl: "/case-detail/sicoob-credicaru"
     },
     {
       client: "CIA CANOINHAS",
@@ -44,7 +44,7 @@ export default function Cases() {
       result: "Centralização do monitoramento em sala específica, aumento na segurança patrimonial e do trabalho, agilidade na identificação de ocorrências e resolução de problemas na área de segurança.",
       tags: ["CFTV", "Segurança", "Monitoramento", "Câmeras IP"],
       image: "/images/team-support.jpg",
-      caseUrl: "https://inovainfo.com.br/cases/cia-canoinhas"
+      caseUrl: "/case-detail/cia-canoinhas"
     },
     {
       client: "MEDCHAP",
@@ -54,7 +54,7 @@ export default function Cases() {
       result: "Equipamentos integrados para segurança e disponibilidade, backup seguro e protegido, armazenamento de dados seguros. O TI Medchap tornou-se referência no segmento de medicamentos.",
       tags: ["Firewall", "Cloud Backup", "Licenciamento", "Infraestrutura Completa"],
       image: "/images/hero-infrastructure.jpg",
-      caseUrl: "https://inovainfo.com.br/cases/medchap"
+      caseUrl: "/case-detail/medchap"
     }
   ];
 
@@ -114,7 +114,7 @@ export default function Cases() {
                     </div>
 
                     <div className="flex flex-wrap gap-4">
-                      <a href={item.caseUrl} target="_blank" rel="noreferrer">
+                      <a href={item.caseUrl}>
                         <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white h-12 px-6 text-sm uppercase tracking-widest font-bold rounded-none">
                           Ver Case na Íntegra <ExternalLink className="ml-2 w-4 h-4" />
                         </Button>
