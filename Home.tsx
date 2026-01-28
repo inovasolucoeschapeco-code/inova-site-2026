@@ -15,7 +15,7 @@ export default function Home() {
           <img 
             src="/images/hero-infrastructure.jpg" 
             alt="Infraestrutura de TI Inova" 
-            className="w-full h-full object-cover opacity-60"
+            className="w-full h-full object-cover opacity-100"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-foreground via-foreground/90 to-transparent"></div>
           
