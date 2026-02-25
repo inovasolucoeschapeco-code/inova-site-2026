@@ -43,8 +43,9 @@ export default function Clientes() {
                   alt={`Cliente ${index + 1}`}
                   className="max-h-16 md:max-h-20 lg:max-h-24 w-full object-contain grayscale group-hover:grayscale-0 transition-all"
                   onError={(e) => {
-                    // Esconder se a imagem não carregar
-                    (e.target as HTMLImageElement).style.display = 'none';
+                    // Esconder o container inteiro se a imagem não carregar
+                    const container = (e.target as HTMLImageElement).parentElement;
+                    if (container) container.style.display = 'none';
                   }}
                 />
               </div>
