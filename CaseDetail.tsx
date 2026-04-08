@@ -49,6 +49,16 @@ export default function CaseDetail() {
       image: "/images/team-support.jpg",
       details: "A Cia Canoinhas de Papel é uma empresa de grande porte com operações complexas e necessidade de segurança patrimonial elevada.\n\nA Inova implementou:\n\n• 40 câmeras IPs de alta resolução\n• Servidor HPE com software Digifort\n• Sala de monitoramento com tela full HD\n• Sistema de gravação com redundância\n\nO projeto centralizou o monitoramento, aumentou a segurança patrimonial e permitiu resposta rápida a incidentes."
     },
+    "irani-mp5": {
+      client: "CELULOSE IRANI S/A",
+      location: "Vargem Bonita - SC",
+      title: "Infraestrutura de Redes e Automação para a Máquina de Papel nº 5",
+      description: "Como parte do Projeto Gaia XI, a Celulose Irani investiu na modernização da Máquina de Papel nº 5 (MP#5) em sua unidade de Vargem Bonita (SC). A Inova foi escolhida para fornecer e executar toda a infraestrutura de redes corporativas (T.I.) e de automação industrial (T.A.) das Salas de Operação e Salas Elétricas.",
+      result: "Uma infraestrutura de rede e automação de altíssima confiabilidade, essencial para o funcionamento ininterrupto da nova MP#5. A segregação entre energia comum e estabilizada (UPS), aliada à redundância das fibras ópticas e certificação de todos os pontos, garantiu a estabilidade necessária para que a Irani alcance suas metas de expansão.",
+      tags: ["Automação Industrial", "Fibra Óptica", "Infraestrutura de Rede", "Projeto Gaia"],
+      image: "/images/irani-vargem-bonita.jpg",
+      details: "A Celulose Irani S/A é uma das principais indústrias nacionais de embalagens sustentáveis de papel e papelão ondulado, com mais de 80 anos de história e produção superior a 317 mil toneladas por ano. Através de sua Plataforma Gaia, a empresa investe continuamente na modernização de suas operações.\n\nO Projeto Gaia XI contemplou a modernização e reforma da Máquina de Papel nº 5 (MP#5) na unidade de Campina da Alegria, em Vargem Bonita (SC). A Inova implementou:\n\n• Lançamento, fusão e certificação de centenas de metros de fibra óptica Furukawa\n• Novo link principal de 210m e anel óptico de 12 pares com redundância total\n• Realocação de 350m de fibra óptica da Rede de Coleta de Dados\n• Racks autoportantes e de parede para redes T.I. e T.A.\n• Switches 24 portas com uplinks SFP e cabeamento certificado\n• Integração com sistemas Siemens, Honeywell e Scanners\n• Energia estabilizada (UPS) segregada e iluminação LED de alta eficiência\n• Certificação completa de todos os pontos ópticos e metálicos\n\nA solução garantiu altíssima confiabilidade para a operação contínua da MP#5, com integração perfeita entre redes corporativas e de automação industrial."
+    },
     "aurora-ampliacao": {
       client: "AURORA ALIMENTOS",
       location: "Tapejara - RS",

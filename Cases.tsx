@@ -55,6 +55,16 @@ export default function Cases() {
       tags: ["Infraestrutura Completa", "Rede Óptica", "CFTV", "Wi-Fi 6"],
       image: "/images/aurora-ampliacao.png",
       caseUrl: "https://inovainfo.com.br/cases/aurora-ampliacao"
+    },
+    {
+      client: "CELULOSE IRANI S/A",
+      location: "Vargem Bonita - SC",
+      title: "Infraestrutura de Redes e Automação para a Máquina de Papel nº 5",
+      description: "Como parte do Projeto Gaia XI, a Celulose Irani investiu na modernização da Máquina de Papel nº 5 (MP#5) em sua unidade de Vargem Bonita (SC). A Inova foi escolhida para fornecer e executar toda a infraestrutura de redes corporativas (T.I.) e de automação industrial (T.A.) das Salas de Operação e Salas Elétricas. O projeto envolveu o lançamento de centenas de metros de fibra óptica, criação de anéis ópticos redundantes, cabeamento estruturado, instalação de racks e integração de sistemas críticos de automação (Siemens, Honeywell e Scanners).",
+      result: "Uma infraestrutura de rede e automação de altíssima confiabilidade, essencial para o funcionamento ininterrupto da nova MP#5. A segregação entre energia comum e estabilizada (UPS), aliada à redundância das fibras ópticas e certificação de todos os pontos, garantiu a estabilidade necessária para que a Irani alcance suas metas de expansão.",
+      tags: ["Automação Industrial", "Fibra Óptica", "Infraestrutura de Rede", "Projeto Gaia"],
+      image: "/images/irani-vargem-bonita.jpg",
+      caseUrl: "https://inovainfo.com.br/cases/irani-mp5"
     }
   ];
 
