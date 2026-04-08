@@ -327,8 +327,8 @@ export default function Home() {
                 A modernização da nossa infraestrutura de rede era um projeto estratégico e complexo, envolvendo 10 unidades em todo o Brasil. A Inova em parceria com a Sercompe não apenas entregou uma solução robusta com a tecnologia Aruba, mas também demonstrou um comprometimento exemplar em todas as fases.
               </p>
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                  <span className="text-primary font-bold">AH</span>
+                <div className="w-12 h-12 rounded-full overflow-hidden">
+                  <img src="/images/ancelmo-hubler.png" alt="Ancelmo Elias Hubler" className="w-full h-full object-cover" />
                 </div>
                 <div>
                   <div className="font-bold text-foreground">Ancelmo Elias Hubler</div>
