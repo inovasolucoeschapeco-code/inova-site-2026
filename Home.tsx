@@ -308,15 +308,15 @@ export default function Home() {
             <div className="bg-white p-8 border border-border relative">
               <div className="text-primary text-6xl font-serif absolute top-4 left-4 opacity-20">"</div>
               <p className="text-lg text-muted-foreground mb-6 relative z-10 italic">
-                Fomos muito bem recepcionados desde o primeiro contato. A atenção e disponibilidade em contribuir com nosso crescimento sempre estiveram presentes em nossa parceria. Com ajuda da Inova nosso TI conseguiu se tornar referência no setor de medicamentos.
+                Nós escolhemos trabalhar com a Inova pela credibilidade regional e por estar sempre ao lado do cliente em seu posicionamento. É um parceiro certificado pelo fabricante e tem histórico positivo em projetos já realizados. Buscamos e encontramos uma solução que oferece uma nova experiência para os usuários.
               </p>
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                  <span className="text-primary font-bold">EP</span>
+                <div className="w-12 h-12 rounded-full overflow-hidden">
+                  <img src="/images/lissandro-hoffmeister.png" alt="Lissandro Hoffmeister" className="w-full h-full object-cover" />
                 </div>
                 <div>
-                  <div className="font-bold text-foreground">Eduardo Pretto</div>
-                  <div className="text-xs text-muted-foreground uppercase tracking-wider">Gestor de TI - Medchap</div>
+                  <div className="font-bold text-foreground">Lissandro Hoffmeister</div>
+                  <div className="text-xs text-muted-foreground uppercase tracking-wider">Diretor de Tecnologia da Informação - Unochapecó</div>
                 </div>
               </div>
             </div>
