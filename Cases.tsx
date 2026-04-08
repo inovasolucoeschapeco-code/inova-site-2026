@@ -149,12 +149,12 @@ export default function Cases() {
         <div className="container mx-auto px-4 relative z-10 text-center">
           <Quote className="w-16 h-16 text-white/30 mx-auto mb-8" />
           <h2 className="font-display font-bold text-3xl md:text-5xl mb-10 max-w-4xl mx-auto leading-tight">
-            "Temos uma relação comercial de longa data com a Inova, sempre com atendimento imediato, seguro e eficiente. Gostamos de interagir e de aprender com nossos fornecedores e a Inova transfere todas essas facilidades."
+            "A modernização da nossa infraestrutura de rede era um projeto estratégico e complexo, envolvendo 10 unidades em todo o Brasil. A Inova em parceria com a Sercompe não apenas entregou uma solução robusta com a tecnologia Aruba, mas também demonstrou um comprometimento exemplar em todas as fases. O resultado é uma rede mais rápida, segura e com gerenciamento simplificado, que nos dá a confiança necessária para suportar o crescimento e as futuras demandas da Dass."
           </h2>
           <div className="flex flex-col items-center">
             <div className="w-16 h-16 bg-white/20 rounded-full mb-4"></div>
-            <div className="font-bold text-lg">Deirudi Ecco</div>
-            <div className="text-white/60 text-sm uppercase tracking-widest">Gerência de TI - Supermercado Celeiro</div>
+            <div className="font-bold text-lg">Ancelmo Elias Hubler</div>
+            <div className="text-white/60 text-sm uppercase tracking-widest">Coordenador de Infraestrutura de TI em Operações - Dass</div>
           </div>
         </div>
       </section>

@@ -3,21 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Case Grupo Dass - Inova Soluções Tecnológicas</title>
+    <title>Case DASS - Refresh Nacional de Rede com Solução HPE Networking | Inova</title>
     <link rel="stylesheet" href="../assets/index-9E2ICvO3.css">
     <style>
-        body { background-color: #0a0a0a; color: #ffffff; font-family: sans-serif; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: #0a0a0a; color: #ffffff; font-family: 'Inter', sans-serif; line-height: 1.7; }
         .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
-        .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 60px; }
-        .logo { height: 60px; }
-        .case-title { font-size: 3rem; font-weight: bold; margin-bottom: 20px; color: #00b38a; }
-        .case-subtitle { font-size: 1.2rem; color: #cccccc; margin-bottom: 40px; }
-        .content-section { margin-bottom: 40px; line-height: 1.6; }
-        .content-section h2 { font-size: 1.8rem; margin-bottom: 20px; color: #00b38a; }
-        .results-box { background-color: #1a1a1a; padding: 30px; border-radius: 10px; border-left: 5px solid #00b38a; }
-        .testimonial { font-style: italic; font-size: 1.1rem; margin-top: 40px; padding: 20px; border-top: 1px solid #333; }
-        .back-link { color: #00b38a; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 20px; }
+        .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid #222; }
+        .logo { height: 50px; }
+        .back-link { color: #00b38a; text-decoration: none; font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
         .back-link:hover { text-decoration: underline; }
+
+        .hero-image { width: 100%; max-height: 500px; object-fit: cover; border-radius: 8px; margin-bottom: 40px; }
+        .case-title { font-size: 3rem; font-weight: 800; margin-bottom: 10px; color: #00b38a; text-transform: uppercase; letter-spacing: 2px; }
+        .case-subtitle { font-size: 1.15rem; color: #999; margin-bottom: 15px; }
+        .tags { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 40px; }
+        .tag { background: #1a1a1a; color: #00b38a; padding: 6px 16px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; border: 1px solid #333; border-radius: 4px; }
+
+        .impact-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 50px; }
+        .impact-card { background: #111; border: 1px solid #222; border-radius: 8px; padding: 24px; text-align: center; }
+        .impact-number { font-size: 2rem; font-weight: 800; color: #00b38a; margin-bottom: 6px; }
+        .impact-label { font-size: 0.85rem; color: #888; text-transform: uppercase; letter-spacing: 1px; }
+
+        .intro-text { font-size: 1.1rem; color: #ccc; margin-bottom: 50px; line-height: 1.8; }
+
+        .section { margin-bottom: 50px; }
+        .section h2 { font-size: 1.8rem; font-weight: 700; color: #00b38a; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #1a1a1a; }
+        .section p { color: #ccc; margin-bottom: 16px; font-size: 1rem; }
+
+        .solution-block { background: #111; border-left: 4px solid #00b38a; padding: 24px 28px; margin-bottom: 20px; border-radius: 0 8px 8px 0; }
+        .solution-block h3 { color: #fff; font-size: 1.2rem; margin-bottom: 12px; font-weight: 700; }
+        .solution-block p { color: #bbb; margin-bottom: 0; }
+
+        .results-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+        .result-item { background: #111; border: 1px solid #222; border-radius: 8px; padding: 24px; }
+        .result-item h4 { color: #00b38a; font-size: 1rem; margin-bottom: 8px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+        .result-item p { color: #bbb; margin-bottom: 0; font-size: 0.95rem; }
+
+        .testimonial { background: linear-gradient(135deg, #0d2b23, #111); border: 1px solid #1a3a2f; border-radius: 12px; padding: 40px; margin: 50px 0; text-align: center; }
+        .testimonial .quote-icon { font-size: 3rem; color: #00b38a; opacity: 0.4; margin-bottom: 16px; }
+        .testimonial blockquote { font-size: 1.15rem; font-style: italic; color: #ddd; line-height: 1.8; margin-bottom: 20px; max-width: 800px; margin-left: auto; margin-right: auto; }
+        .testimonial .author { font-weight: 700; color: #fff; font-size: 1rem; }
+        .testimonial .role { color: #00b38a; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
+
+        .cta-section { text-align: center; padding: 40px 0; border-top: 1px solid #222; margin-top: 40px; }
+        .cta-button { display: inline-block; background: #00b38a; color: #fff; padding: 14px 32px; text-decoration: none; font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; border-radius: 4px; transition: background 0.3s; }
+        .cta-button:hover { background: #00956f; }
+
+        .units-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+        .unit-badge { background: #1a1a1a; color: #aaa; padding: 4px 12px; font-size: 0.8rem; border-radius: 4px; border: 1px solid #333; }
+
+        @media (max-width: 768px) {
+            .case-title { font-size: 2rem; }
+            .impact-cards { grid-template-columns: repeat(2, 1fr); }
+        }
     </style>
 </head>
 <body>
@@ -27,32 +66,131 @@
             <a href="../cases" class="back-link">← Voltar para Cases</a>
         </div>
 
-        <h1 class="case-title">GRUPO DASS</h1>
-        <p class="case-subtitle">Modernização de Infraestrutura de Rede com Aruba | Nacional - Brasil</p>
+        <img src="/images/dass-planta.png" alt="Planta DASS - Vitória da Conquista" class="hero-image">
 
-        <div class="content-section">
+        <h1 class="case-title">DASS</h1>
+        <p class="case-subtitle">Refresh Nacional de Rede com Solução HPE Networking | Nacional - Brasil</p>
+        <div class="tags">
+            <span class="tag">HPE Networking</span>
+            <span class="tag">Wi-Fi 6E</span>
+            <span class="tag">Switches CX</span>
+            <span class="tag">Aruba Central</span>
+        </div>
+
+        <!-- Impact Cards -->
+        <div class="impact-cards">
+            <div class="impact-card">
+                <div class="impact-number">10</div>
+                <div class="impact-label">Unidades Atendidas</div>
+            </div>
+            <div class="impact-card">
+                <div class="impact-number">Wi-Fi 6E</div>
+                <div class="impact-label">Banda de 6 GHz</div>
+            </div>
+            <div class="impact-card">
+                <div class="impact-number">3</div>
+                <div class="impact-label">Fases do Projeto</div>
+            </div>
+            <div class="impact-card">
+                <div class="impact-number">AIOps</div>
+                <div class="impact-label">Gerenciamento Inteligente</div>
+            </div>
+        </div>
+
+        <!-- Introdução -->
+        <p class="intro-text">
+            O <strong>Grupo Dass</strong> é um dos maiores players do setor calçadista e de artigos esportivos do mundo, fabricando para marcas globais como Nike, Asics e Fila. Com uma operação de escala nacional e internacional, a empresa demanda uma infraestrutura de TI que suporte processos críticos de fabricação, logística e gestão administrativa com máxima eficiência e segurança.
+        </p>
+
+        <!-- O Desafio -->
+        <div class="section">
             <h2>O Desafio</h2>
-            <p>O Grupo Dass, um dos maiores players do setor calçadista e de artigos esportivos do mundo, precisava modernizar sua infraestrutura de rede (LAN e WLAN) em todas as suas unidades no Brasil para suportar o crescimento da produção e a implementação de tecnologias de IoT industrial.</p>
+            <p>Com operações distribuídas em todas as suas unidades no Brasil, a Dass enfrentava o desafio de modernizar sua infraestrutura de rede (LAN e WLAN). Os equipamentos legados já não atendiam às demandas crescentes de conectividade e performance, e era necessário substituí-los por uma solução que oferecesse:</p>
+            <div class="solution-block" style="margin-top: 16px;">
+                <p><strong>Alta Performance:</strong> Suporte para aplicações de alta demanda e grande volume de dados nas linhas de produção e escritórios.</p>
+            </div>
+            <div class="solution-block">
+                <p><strong>Conectividade Unificada:</strong> Padronização tecnológica entre todas as unidades, eliminando a heterogeneidade de equipamentos.</p>
+            </div>
+            <div class="solution-block">
+                <p><strong>Gerenciamento Centralizado:</strong> Visibilidade total e controle simplificado da rede a partir de um único painel.</p>
+            </div>
+            <div class="solution-block">
+                <p><strong>Segurança Avançada:</strong> Proteção robusta para dados corporativos e dispositivos IoT no ambiente industrial.</p>
+            </div>
         </div>
 
-        <div class="content-section">
-            <h2>A Solução</h2>
-            <p>A Inova, em parceria com a Sercompe, implementou uma solução completa baseada em tecnologias Aruba. Foram instalados Access Points Aruba Wi-Fi 6E de última geração, Switches Aruba CX de alta performance e o gerenciamento centralizado via Aruba Central com recursos de AIOps (Inteligência Artificial para Operações de TI).</p>
+        <!-- A Solução -->
+        <div class="section">
+            <h2>A Solução Implementada</h2>
+            <p>A <strong>Inova</strong>, em parceria estratégica com a <strong>Sercompe</strong>, desenhou e executou um projeto de refresh de rede em três fases, utilizando o que há de mais moderno no portfólio da <strong>Aruba (HPE)</strong>.</p>
+
+            <div class="solution-block" style="margin-top: 24px;">
+                <h3>Access Points Aruba Wi-Fi 6E (Séries 610 e 630)</h3>
+                <p>Introdução da banda de 6 GHz, garantindo capacidade triplicada em relação à geração anterior, menor interferência e suporte nativo a aplicações de vídeo HD e AR/VR. A tecnologia Wi-Fi 6E proporciona canais mais largos e dedicados, ideais para ambientes industriais de alta densidade.</p>
+            </div>
+
+            <div class="solution-block">
+                <h3>Switches Aruba CX 6100 e 6300</h3>
+                <p>Infraestrutura cabeada de classe empresarial com automação via sistema operacional AOS-CX e alta disponibilidade. Os switches CX 6300 oferecem recursos avançados de Layer 3, VSX para redundância e suporte a 10G, enquanto os CX 6100 atendem à camada de acesso com PoE+ para alimentar os Access Points e dispositivos IoT.</p>
+            </div>
+
+            <div class="solution-block">
+                <h3>Aruba Central com AIOps</h3>
+                <p>Gerenciamento unificado em nuvem com inteligência artificial para operações de TI (AIOps), permitindo diagnósticos inteligentes, resolução proativa de problemas e visibilidade completa de toda a rede nacional a partir de um único painel de controle.</p>
+            </div>
+
+            <p style="margin-top: 24px;">O projeto abrangeu diversas localidades estratégicas da Dass em todo o território nacional:</p>
+            <div class="units-list">
+                <span class="unit-badge">Vitória da Conquista - BA</span>
+                <span class="unit-badge">Santo Estevão - BA</span>
+                <span class="unit-badge">Itaberaba - BA</span>
+                <span class="unit-badge">Santo Antônio de Jesus - BA</span>
+                <span class="unit-badge">Itapipoca - CE</span>
+                <span class="unit-badge">São Paulo - SP</span>
+                <span class="unit-badge">Guarulhos - SP</span>
+                <span class="unit-badge">Ivoti - RS</span>
+                <span class="unit-badge">Saudades - SC</span>
+            </div>
         </div>
 
-        <div class="results-box">
+        <!-- Resultados -->
+        <div class="section">
             <h2>Resultados Alcançados</h2>
-            <ul>
-                <li>Eliminação total de gargalos de conectividade nas unidades fabris.</li>
-                <li>Redução drástica no tempo de resposta da equipe de TI para resolução de incidentes.</li>
-                <li>Infraestrutura preparada para a indústria 4.0 e próximas gerações de dispositivos móveis.</li>
-                <li>Visibilidade completa da rede através do gerenciamento em nuvem.</li>
-            </ul>
+            <div class="results-grid">
+                <div class="result-item">
+                    <h4>Estabilidade e Velocidade</h4>
+                    <p>Eliminação completa de gargalos de conectividade em todas as plantas industriais e escritórios, proporcionando uma experiência de rede consistente e de alta performance em todas as 10 unidades.</p>
+                </div>
+                <div class="result-item">
+                    <h4>Eficiência Operacional</h4>
+                    <p>Redução significativa do tempo de resposta da equipe de TI graças ao gerenciamento centralizado via nuvem com AIOps, permitindo identificar e resolver problemas de forma proativa antes que impactem a operação.</p>
+                </div>
+                <div class="result-item">
+                    <h4>Prontidão para o Futuro</h4>
+                    <p>Infraestrutura totalmente preparada para as próximas gerações de dispositivos móveis e tecnologias de IoT industrial, garantindo que a Dass esteja à frente das demandas tecnológicas do setor calçadista.</p>
+                </div>
+                <div class="result-item">
+                    <h4>Padronização Nacional</h4>
+                    <p>Unificação tecnológica de todas as unidades sob uma mesma plataforma de rede, simplificando a gestão, reduzindo custos operacionais e garantindo políticas de segurança consistentes em todo o Brasil.</p>
+                </div>
+            </div>
         </div>
 
+        <!-- Depoimento -->
         <div class="testimonial">
-            <p>"Temos uma relação comercial de longa data com a Inova, sempre com atendimento imediato, seguro e eficiente. Gostamos de interagir e de aprender com nossos fornecedores e a Inova transfere todas essas facilidades."</p>
-            <p><strong>Ancelmo Elias Hubler</strong><br>Gerente de Infraestrutura de TI - Grupo Dass</p>
+            <div class="quote-icon">"</div>
+            <blockquote>
+                "A modernização da nossa infraestrutura de rede era um projeto estratégico e complexo, envolvendo 10 unidades em todo o Brasil. A Inova em parceria com a Sercompe não apenas entregou uma solução robusta com a tecnologia Aruba, mas também demonstrou um comprometimento exemplar em todas as fases. O resultado é uma rede mais rápida, segura e com gerenciamento simplificado, que nos dá a confiança necessária para suportar o crescimento e as futuras demandas da Dass."
+            </blockquote>
+            <div class="author">Ancelmo Elias Hubler</div>
+            <div class="role">Coordenador de Infraestrutura de TI em Operações - Dass</div>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta-section">
+            <p style="color: #999; margin-bottom: 20px;">Quer resultados como esses para sua empresa?</p>
+            <a href="https://wa.me/554933193900" target="_blank" class="cta-button">Falar com Consultor</a>
         </div>
 
         <a href="../cases" class="back-link">← Voltar para Cases</a>

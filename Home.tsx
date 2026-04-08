@@ -324,15 +324,15 @@ export default function Home() {
             <div className="bg-white p-8 border border-border relative">
               <div className="text-primary text-6xl font-serif absolute top-4 left-4 opacity-20">"</div>
               <p className="text-lg text-muted-foreground mb-6 relative z-10 italic">
-                Temos uma relação comercial de longa data com a Inova Soluções Tecnológicas, sempre com atendimento imediato, seguro e eficiente. Gostamos de interagir e de aprender com nossos fornecedores e a Inova transfere todas essas facilidades.
+                A modernização da nossa infraestrutura de rede era um projeto estratégico e complexo, envolvendo 10 unidades em todo o Brasil. A Inova em parceria com a Sercompe não apenas entregou uma solução robusta com a tecnologia Aruba, mas também demonstrou um comprometimento exemplar em todas as fases.
               </p>
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                  <span className="text-primary font-bold">DE</span>
+                  <span className="text-primary font-bold">AH</span>
                 </div>
                 <div>
-                  <div className="font-bold text-foreground">Deirudi Ecco</div>
-                  <div className="text-xs text-muted-foreground uppercase tracking-wider">Gerência de TI - Supermercado Celeiro</div>
+                  <div className="font-bold text-foreground">Ancelmo Elias Hubler</div>
+                  <div className="text-xs text-muted-foreground uppercase tracking-wider">Coordenador de Infraestrutura de TI em Operações - Dass</div>
                 </div>
               </div>
             </div>
