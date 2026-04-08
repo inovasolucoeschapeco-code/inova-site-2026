@@ -27,14 +27,14 @@ export default function Cases() {
       caseUrl: "/case-detail/celeiro"
     },
     {
-      client: "SICOOB CREDICARÚ",
-      location: "São José do Cerrito - SC",
-      title: "Cloud Backup e Replicação de Alta Disponibilidade",
-      description: "A Sicoob Credicarú, com nove pontos de atendimento em SC e RS, adquiriu uma solução de Cloud Backup e posteriormente uma solução de replicação para alta disponibilidade. O backup de 4 servidores virtuais (480 GB) é transferido para o ambiente Inova Cloud Backup e replicado a cada hora em servidor HPE local.",
-      result: "Aumento na segurança, alta disponibilidade de dados, agilidade na recuperação, gerenciamento e monitoramento constante, eliminação do risco de transporte de discos físicos.",
-      tags: ["Cloud Backup", "Alta Disponibilidade", "Replicação", "Segurança de Dados"],
-      image: "/images/security-shield.jpg",
-      caseUrl: "/case-detail/sicoob-credicaru"
+      client: "AURORA ALIMENTOS",
+      location: "Tapejara - RS",
+      title: "Ampliação e Modernização da Infraestrutura de TI e Energia",
+      description: "O Frigorífico Aurora Tapejara-I (FATA-I) realizou um projeto de ampliação e modernização de sua infraestrutura de TI e energia estabilizada, abrangendo a Captação de Água Bruta e a Estação de Tratamento de Efluentes (ETE). A Inova implementou uma solução completa com redes ópticas em topologia estrela, cabeamento estruturado CAT6A, novos racks de comunicação e distribuição de energia estabilizada via no-breaks com gerenciamento SNMP, garantindo alta disponibilidade para as operações críticas da unidade.",
+      result: "Alta disponibilidade e segurança para as operações críticas da planta, com infraestrutura de rede óptica robusta, cabeamento estruturado de alta performance e energia estabilizada com monitoramento remoto. O projeto preparou a unidade para futuras expansões e garantiu a confiabilidade necessária para o ambiente industrial.",
+      tags: ["Infraestrutura de Rede", "Fibra Óptica", "Energia Estabilizada", "HP Aruba"],
+      image: "/images/aurora-tapejara.png",
+      caseUrl: "/case-detail/aurora-tapejara"
     },
     {
       client: "CIA CANOINHAS",

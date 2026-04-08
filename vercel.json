@@ -1,6 +1,11 @@
 {
   "rewrites": [
     { "source": "/cases", "destination": "/index.html" },
+    { "source": "/cases/aurora-tapejara", "destination": "/aurora-tapejara.html" },
+    { "source": "/cases/unochapeco", "destination": "/unochapeco.html" },
+    { "source": "/cases/dass", "destination": "/dass.html" },
+    { "source": "/cases/cia-canoinhas", "destination": "/canoinhas.html" },
+    { "source": "/cases/medchap", "destination": "/medchap.html" },
     { "source": "/case-detail/(.*)", "destination": "/index.html" },
     { "source": "/clientes", "destination": "/index.html" },
     { "source": "/solucoes", "destination": "/index.html" },

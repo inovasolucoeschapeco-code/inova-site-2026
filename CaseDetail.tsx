@@ -29,15 +29,15 @@ export default function CaseDetail() {
       image: "/images/productivity-office.jpg",
       details: "O Supermercado Celeiro é uma instituição importante na comunidade chapecoense há mais de 50 anos. Com a modernização do varejo, a empresa precisava de uma infraestrutura de TI robusta e confiável.\n\nA Inova implementou:\n\n• Virtualização VMWARE para melhor aproveitamento de recursos\n• 3 servidores HPE de alta performance\n• Storage HPE MSA 2040 com conexão em fibra óptica\n• Backup e monitoramento 24/7\n\nA solução garantiu alta disponibilidade dos sistemas, reduzindo riscos de parada operacional e melhorando a eficiência dos processos."
     },
-    "sicoob-credicaru": {
-      client: "SICOOB CREDICARÚ",
-      location: "São José do Cerrito - SC",
-      title: "Cloud Backup e Replicação de Alta Disponibilidade",
-      description: "A Sicoob Credicarú, com nove pontos de atendimento em SC e RS, adquiriu uma solução de Cloud Backup e posteriormente uma solução de replicação para alta disponibilidade. O backup de 4 servidores virtuais (480 GB) é transferido para o ambiente Inova Cloud Backup e replicado a cada hora em servidor HPE local.",
-      result: "Aumento na segurança, alta disponibilidade de dados, agilidade na recuperação, gerenciamento e monitoramento constante, eliminação do risco de transporte de discos físicos.",
-      tags: ["Cloud Backup", "Alta Disponibilidade", "Replicação", "Segurança de Dados"],
-      image: "/images/security-shield.jpg",
-      details: "A Sicoob Credicarú é uma cooperativa de crédito com presença em múltiplos estados. A segurança e disponibilidade dos dados são críticas para suas operações.\n\nA Inova implementou:\n\n• Cloud Backup com replicação automática\n• Backup de 4 servidores virtuais (480 GB)\n• Replicação a cada hora em servidor HPE local\n• Monitoramento 24/7 e alertas automáticos\n\nA solução eliminou o risco de transporte de discos físicos e garantiu que os dados estejam sempre protegidos e disponíveis para recuperação rápida."
+    "aurora-tapejara": {
+      client: "AURORA ALIMENTOS",
+      location: "Tapejara - RS",
+      title: "Ampliação e Modernização da Infraestrutura de TI e Energia",
+      description: "O Frigorífico Aurora Tapejara-I (FATA-I) realizou um projeto de ampliação e modernização de sua infraestrutura de TI e energia estabilizada, abrangendo a Captação de Água Bruta e a Estação de Tratamento de Efluentes (ETE). A Inova implementou uma solução completa com redes ópticas em topologia estrela, cabeamento estruturado CAT6A, novos racks de comunicação e distribuição de energia estabilizada via no-breaks com gerenciamento SNMP, garantindo alta disponibilidade para as operações críticas da unidade.",
+      result: "Alta disponibilidade e segurança para as operações críticas da planta, com infraestrutura de rede óptica robusta, cabeamento estruturado de alta performance e energia estabilizada com monitoramento remoto. O projeto preparou a unidade para futuras expansões e garantiu a confiabilidade necessária para o ambiente industrial.",
+      tags: ["Infraestrutura de Rede", "Fibra Óptica", "Energia Estabilizada", "HP Aruba"],
+      image: "/images/aurora-tapejara.png",
+      details: "O Frigorífico Aurora Tapejara-I (FATA-I), parte da Cooperativa Central Aurora Alimentos, é uma unidade industrial de grande porte localizada em Tapejara, RS. Com a ampliação da Estação de Tratamento de Efluentes (ETE) e da Captação de Água Bruta, surgiu a necessidade de modernizar e expandir a infraestrutura de TI e energia estabilizada.\n\nA Inova implementou:\n\n• Rede óptica em topologia estrela com cabos blindados para trechos externos\n• Cabeamento estruturado FTP CAT6A com proteção contra interferências eletromagnéticas\n• Switches HPE Aruba Networking CX 6000 com PoE para câmeras IP e access points\n• No-breaks senoidais online com SNMP e banco de baterias externo para 30 min de autonomia\n• Sistema de CFTV com câmeras IP de alta resolução e NVR de 128 canais\n\nA solução garantiu alta disponibilidade para as operações críticas da planta, com infraestrutura robusta preparada para futuras expansões e monitoramento remoto de toda a rede e energia."
     },
     "cia-canoinhas": {
       client: "CIA CANOINHAS",
