@@ -162,7 +162,7 @@ export default function Cases() {
             "A modernização da nossa infraestrutura de rede era um projeto estratégico e complexo, envolvendo 10 unidades em todo o Brasil. A Inova em parceria com a Sercompe não apenas entregou uma solução robusta com a tecnologia Aruba, mas também demonstrou um comprometimento exemplar em todas as fases. O resultado é uma rede mais rápida, segura e com gerenciamento simplificado, que nos dá a confiança necessária para suportar o crescimento e as futuras demandas da Dass."
           </h2>
           <div className="flex flex-col items-center">
-            <div className="w-16 h-16 bg-white/20 rounded-full mb-4"></div>
+            <img src="/images/ancelmo.png" alt="Ancelmo Elias Hubler" className="w-16 h-16 rounded-full mb-4 object-cover" />
             <div className="font-bold text-lg">Ancelmo Elias Hubler</div>
             <div className="text-white/60 text-sm uppercase tracking-widest">Coordenador de Infraestrutura de TI em Operações - Dass</div>
           </div>
