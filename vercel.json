@@ -7,6 +7,7 @@
     { "source": "/cases/cia-canoinhas", "destination": "/canoinhas.html" },
     { "source": "/cases/aurora-ampliacao", "destination": "/aurora-ampliacao.html" },
     { "source": "/cases/irani-mp5", "destination": "/irani-mp5.html" },
+    { "source": "/cases/rotesma", "destination": "/rotesma.html" },
     { "source": "/case-detail/(.*)", "destination": "/index.html" },
     { "source": "/clientes", "destination": "/index.html" },
     { "source": "/solucoes", "destination": "/index.html" },

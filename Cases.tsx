@@ -65,6 +65,16 @@ export default function Cases() {
       tags: ["Automação Industrial", "Fibra Óptica", "Infraestrutura de Rede", "Projeto Gaia"],
       image: "/images/irani-vargem-bonita.jpg",
       caseUrl: "https://inovainfo.com.br/cases/irani-mp5"
+    },
+    {
+      client: "ROTESMA",
+      location: "Chapecó - SC",
+      title: "Infraestrutura Completa para o Novo Centro Administrativo",
+      description: "Para suportar as operações do seu novo e moderno Centro Administrativo em Chapecó, a Rotesma contou com a Inova para projetar e executar uma infraestrutura de TI de ponta a ponta. O projeto englobou mais de 250 pontos de rede com cabeamento estruturado Cat6A Blindado (10G), instalação de piso elevado para o Data Center, sistema de energia estabilizada com nobreaks de alta capacidade, rede Wi-Fi 6 de alta densidade, além de controle de acesso biométrico e automação de climatização para a sala de servidores.",
+      result: "Um ambiente corporativo de altíssima performance e disponibilidade, preparado para as demandas atuais e futuras da Rotesma. A infraestrutura entregue garante conectividade ultrarrápida (10G), segurança física e lógica, além de um Data Center moderno com redundância de energia e climatização automatizada.",
+      tags: ["Cabeamento Estruturado", "Data Center", "Wi-Fi 6", "Energia Estabilizada"],
+      image: "/images/rotesma.png",
+      caseUrl: "https://inovainfo.com.br/cases/rotesma"
     }
   ];
 
