@@ -5,7 +5,7 @@
     { "source": "/cases/unochapeco", "destination": "/unochapeco.html" },
     { "source": "/cases/dass", "destination": "/dass.html" },
     { "source": "/cases/cia-canoinhas", "destination": "/canoinhas.html" },
-    { "source": "/cases/medchap", "destination": "/medchap.html" },
+    { "source": "/cases/aurora-ampliacao", "destination": "/aurora-ampliacao.html" },
     { "source": "/case-detail/(.*)", "destination": "/index.html" },
     { "source": "/clientes", "destination": "/index.html" },
     { "source": "/solucoes", "destination": "/index.html" },

@@ -47,14 +47,14 @@ export default function Cases() {
       caseUrl: "/case-detail/cia-canoinhas"
     },
     {
-      client: "MEDCHAP",
-      location: "Chapecó - SC",
-      title: "Parceria Completa de TI desde 2016",
-      description: "A Medchap, uma das maiores distribuidoras de Medicamentos Similares de SC, iniciou parceria com a Inova em 2016 para implementar Firewall. Desde então, diversas soluções foram implantadas: servidores, licenciamento de softwares (Microsoft, Veeam, Kaspersky), Cloud Backup, data center, links de fibra, cabeamento e switches.",
-      result: "Equipamentos integrados para segurança e disponibilidade, backup seguro e protegido, armazenamento de dados seguros. O TI Medchap tornou-se referência no segmento de medicamentos.",
-      tags: ["Firewall", "Cloud Backup", "Licenciamento", "Infraestrutura Completa"],
-      image: "/images/hero-infrastructure.jpg",
-      caseUrl: "/case-detail/medchap"
+      client: "AURORA ALIMENTOS",
+      location: "Tapejara - RS",
+      title: "Infraestrutura de TI para a Nova Indústria de Frango Griller",
+      description: "Com um investimento de R$ 210 milhões, a Aurora Coop modernizou e ampliou o Frigorífico Tapejara-I (FATA-I), transformando-o em uma nova indústria voltada à exportação de frango Griller. Para suportar essa megaoperação de 18,5 mil m², a Inova implementou uma infraestrutura de TI de ponta a ponta: rede óptica em topologia estrela, 18 racks distribuídos, switches core HPE Comware 10G, switches de acesso Aruba com PoE, sistema de CFTV com 128 canais, cobertura Wi-Fi 6 e distribuição de energia estabilizada com no-breaks gerenciáveis.",
+      result: "Uma infraestrutura tecnológica robusta, segura e de alta performance, capaz de suportar o aumento de 80% na capacidade de abate (10 mil aves/hora). A solução garantiu conectividade ininterrupta, monitoramento centralizado e energia estabilizada para todas as áreas críticas da nova planta industrial, preparando a unidade para faturar R$ 238 milhões anuais com exportações.",
+      tags: ["Infraestrutura Completa", "Rede Óptica", "CFTV", "Wi-Fi 6"],
+      image: "/images/aurora-ampliacao.png",
+      caseUrl: "https://inovainfo.com.br/cases/aurora-ampliacao"
     }
   ];
 

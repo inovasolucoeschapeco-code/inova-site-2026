@@ -49,15 +49,15 @@ export default function CaseDetail() {
       image: "/images/team-support.jpg",
       details: "A Cia Canoinhas de Papel é uma empresa de grande porte com operações complexas e necessidade de segurança patrimonial elevada.\n\nA Inova implementou:\n\n• 40 câmeras IPs de alta resolução\n• Servidor HPE com software Digifort\n• Sala de monitoramento com tela full HD\n• Sistema de gravação com redundância\n\nO projeto centralizou o monitoramento, aumentou a segurança patrimonial e permitiu resposta rápida a incidentes."
     },
-    "medchap": {
-      client: "MEDCHAP",
-      location: "Chapecó - SC",
-      title: "Parceria Completa de TI desde 2016",
-      description: "A Medchap, uma das maiores distribuidoras de Medicamentos Similares de SC, iniciou parceria com a Inova em 2016 para implementar Firewall. Desde então, diversas soluções foram implantadas: servidores, licenciamento de softwares (Microsoft, Veeam, Kaspersky), Cloud Backup, data center, links de fibra, cabeamento e switches.",
-      result: "Equipamentos integrados para segurança e disponibilidade, backup seguro e protegido, armazenamento de dados seguros. O TI Medchap tornou-se referência no segmento de medicamentos.",
-      tags: ["Firewall", "Cloud Backup", "Licenciamento", "Infraestrutura Completa"],
-      image: "/images/hero-infrastructure.jpg",
-      details: "A Medchap é uma das maiores distribuidoras de medicamentos similares de Santa Catarina, com operações críticas que dependem de TI confiável.\n\nDesde 2016, a Inova é parceira estratégica implementando:\n\n• Firewall de segurança\n• Servidores e virtualização\n• Licenciamento Microsoft, Veeam e Kaspersky\n• Cloud Backup e data center\n• Links de fibra óptica\n• Cabeamento estruturado e switches\n\nA parceria de longa data consolidou o TI Medchap como referência no segmento de medicamentos."
+    "aurora-ampliacao": {
+      client: "AURORA ALIMENTOS",
+      location: "Tapejara - RS",
+      title: "Infraestrutura de TI para a Nova Indústria de Frango Griller",
+      description: "Com um investimento de R$ 210 milhões, a Aurora Coop modernizou e ampliou o Frigorífico Tapejara-I (FATA-I), transformando-o em uma nova indústria voltada à exportação de frango Griller. Para suportar essa megaoperação de 18,5 mil m², a Inova implementou uma infraestrutura de TI de ponta a ponta.",
+      result: "Uma infraestrutura tecnológica robusta, segura e de alta performance, capaz de suportar o aumento de 80% na capacidade de abate (10 mil aves/hora).",
+      tags: ["Infraestrutura Completa", "Rede Óptica", "CFTV", "Wi-Fi 6"],
+      image: "/images/aurora-ampliacao.png",
+      details: "A Aurora Coop realizou um investimento histórico de R$ 210 milhões na ampliação e modernização do Frigorífico Tapejara-I (FATA-I), no Rio Grande do Sul. A unidade teve 74% de sua estrutura revitalizada e sua área construída ampliada para 18,5 mil m², retornando praticamente como uma nova indústria.\n\nA Inova implementou:\n\n• Rede óptica em topologia estrela com 18 racks distribuídos\n• Switches core HPE Comware 5140 com uplinks 10G\n• Switches de acesso HPE Aruba CX 6000 com PoE\n• Sistema de CFTV IP com NVR Hikvision de 128 canais\n• Access Points Ubiquiti U6-PRO Wi-Fi 6 e Extreme\n• No-breaks senoidais online de 1.2 a 8 KVA com SNMP\n• Cabeamento estruturado CAT6 com infraestrutura em inox\n\nA solução garantiu conectividade ininterrupta, monitoramento centralizado e energia estabilizada para todas as áreas críticas da nova planta industrial, preparando a unidade para faturar R$ 238 milhões anuais com exportações."
     }
   };
 
