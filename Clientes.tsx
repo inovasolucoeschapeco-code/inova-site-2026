@@ -5,8 +5,8 @@ import { ShoppingCart, Handshake, GraduationCap, Factory, Users } from "lucide-r
 export default function Clientes() {
   const whatsappLink = "https://wa.me/554933193900";
 
-  // Gerar array de logos (116 logos baixadas)
-  const totalLogos = 116;
+  // Gerar array de logos (47 logos fornecidas)
+  const totalLogos = 47;
   const logos = Array.from({ length: totalLogos }, (_, i) => `/clientes/logo_${String(i + 1).padStart(3, '0')}.png`);
 
   // Setores de atuação (sem números)
