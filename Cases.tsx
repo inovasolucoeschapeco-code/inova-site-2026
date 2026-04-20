@@ -27,16 +27,6 @@ export default function Cases() {
       caseUrl: "/case-detail/celeiro"
     },
     {
-      client: "AURORA ALIMENTOS",
-      location: "Tapejara - RS",
-      title: "Ampliação e Modernização da Infraestrutura de TI e Energia",
-      description: "O Frigorífico Aurora Tapejara-I (FATA-I) realizou um projeto de ampliação e modernização de sua infraestrutura de TI e energia estabilizada, abrangendo a Captação de Água Bruta e a Estação de Tratamento de Efluentes (ETE). A Inova implementou uma solução completa com redes ópticas em topologia estrela, cabeamento estruturado CAT6A, novos racks de comunicação e distribuição de energia estabilizada via no-breaks com gerenciamento SNMP, garantindo alta disponibilidade para as operações críticas da unidade.",
-      result: "Alta disponibilidade e segurança para as operações críticas da planta, com infraestrutura de rede óptica robusta, cabeamento estruturado de alta performance e energia estabilizada com monitoramento remoto. O projeto preparou a unidade para futuras expansões e garantiu a confiabilidade necessária para o ambiente industrial.",
-      tags: ["Infraestrutura de Rede", "Fibra Óptica", "Energia Estabilizada", "HP Aruba"],
-      image: "/images/aurora-tapejara.png",
-      caseUrl: "/case-detail/aurora-tapejara"
-    },
-    {
       client: "CIA CANOINHAS",
       location: "Canoinhas - SC",
       title: "Projeto de Segurança CFTV com Câmeras IP",
@@ -45,26 +35,6 @@ export default function Cases() {
       tags: ["CFTV", "Segurança", "Monitoramento", "Câmeras IP"],
       image: "/images/team-support.jpg",
       caseUrl: "/case-detail/cia-canoinhas"
-    },
-    {
-      client: "AURORA ALIMENTOS",
-      location: "Tapejara - RS",
-      title: "Infraestrutura de TI para a Nova Indústria de Frango Griller",
-      description: "Com um investimento de R$ 210 milhões, a Aurora Coop modernizou e ampliou o Frigorífico Tapejara-I (FATA-I), transformando-o em uma nova indústria voltada à exportação de frango Griller. Para suportar essa megaoperação de 18,5 mil m², a Inova implementou uma infraestrutura de TI de ponta a ponta: rede óptica em topologia estrela, 18 racks distribuídos, switches core HPE Comware 10G, switches de acesso Aruba com PoE, sistema de CFTV com 128 canais, cobertura Wi-Fi 6 e distribuição de energia estabilizada com no-breaks gerenciáveis.",
-      result: "Uma infraestrutura tecnológica robusta, segura e de alta performance, capaz de suportar o aumento de 80% na capacidade de abate (10 mil aves/hora). A solução garantiu conectividade ininterrupta, monitoramento centralizado e energia estabilizada para todas as áreas críticas da nova planta industrial, preparando a unidade para faturar R$ 238 milhões anuais com exportações.",
-      tags: ["Infraestrutura Completa", "Rede Óptica", "CFTV", "Wi-Fi 6"],
-      image: "/images/aurora-ampliacao.png",
-      caseUrl: "https://inovainfo.com.br/cases/aurora-ampliacao"
-    },
-    {
-      client: "CELULOSE IRANI S/A",
-      location: "Vargem Bonita - SC",
-      title: "Infraestrutura de Redes e Automação para a Máquina de Papel nº 5",
-      description: "Como parte do Projeto Gaia XI, a Celulose Irani investiu na modernização da Máquina de Papel nº 5 (MP#5) em sua unidade de Vargem Bonita (SC). A Inova foi escolhida para fornecer e executar toda a infraestrutura de redes corporativas (T.I.) e de automação industrial (T.A.) das Salas de Operação e Salas Elétricas. O projeto envolveu o lançamento de centenas de metros de fibra óptica, criação de anéis ópticos redundantes, cabeamento estruturado, instalação de racks e integração de sistemas críticos de automação (Siemens, Honeywell e Scanners).",
-      result: "Uma infraestrutura de rede e automação de altíssima confiabilidade, essencial para o funcionamento ininterrupto da nova MP#5. A segregação entre energia comum e estabilizada (UPS), aliada à redundância das fibras ópticas e certificação de todos os pontos, garantiu a estabilidade necessária para que a Irani alcance suas metas de expansão.",
-      tags: ["Automação Industrial", "Fibra Óptica", "Infraestrutura de Rede", "Projeto Gaia"],
-      image: "/images/irani-vargem-bonita.jpg",
-      caseUrl: "https://inovainfo.com.br/cases/irani-mp5"
     },
     {
       client: "ROTESMA",
