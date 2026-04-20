@@ -17,16 +17,6 @@ export default function Cases() {
       caseUrl: "/case-detail/unochapeco"
     },
     {
-      client: "CELEIRO",
-      location: "Chapecó - SC",
-      title: "Reestruturação Completa de TI com Alta Disponibilidade",
-      description: "O supermercado Celeiro, presente na vida das famílias chapecoenses desde a década de 70, investiu em uma nova infraestrutura de servidores, licenciamento e monitoramento. A Inova desenhou uma solução de alta disponibilidade com virtualização VMWARE, 3 servidores HPE de alta performance e Storage HPE MSA 2040 com conexão em fibra óptica.",
-      result: "Aumento na segurança, gerenciamento e monitoramento eficiente, agilidade nos processos e atendimento aos clientes, modernização completa da infraestrutura de TI.",
-      tags: ["Virtualização", "Servidores HPE", "Backup Veeam", "Infraestrutura de TI"],
-      image: "/images/productivity-office.jpg",
-      caseUrl: "/case-detail/celeiro"
-    },
-    {
       client: "CIA CANOINHAS",
       location: "Canoinhas - SC",
       title: "Projeto de Segurança CFTV com Câmeras IP",
