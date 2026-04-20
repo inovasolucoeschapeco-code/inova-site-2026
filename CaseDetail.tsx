@@ -19,26 +19,6 @@ export default function CaseDetail() {
       image: "/images/hero-infrastructure.jpg",
       details: "A Universidade Comunitária da Região de Chapecó (Unochapecó) é uma instituição de ensino superior com grande demanda de conectividade. Com milhares de alunos e colaboradores utilizando a rede Wi-Fi diariamente, a solução precisava ser robusta e escalável.\n\nA Inova implementou uma solução completa com HP Aruba que incluiu:\n\n• 113 switches de distribuição para cobertura total\n• 354 Access Points estrategicamente posicionados\n• Ferramenta de gerenciamento AirWave para monitoramento centralizado\n• Sistema de localização integrado ao app Minha Uno\n\nO resultado foi uma rede Wi-Fi de alta performance, segura e fácil de gerenciar, permitindo que a universidade ofereça melhor experiência aos seus usuários."
     },
-    "celeiro": {
-      client: "CELEIRO",
-      location: "Chapecó - SC",
-      title: "Reestruturação Completa de TI com Alta Disponibilidade",
-      description: "O supermercado Celeiro, presente na vida das famílias chapecoenses desde a década de 70, investiu em uma nova infraestrutura de servidores, licenciamento e monitoramento. A Inova desenhou uma solução de alta disponibilidade com virtualização VMWARE, 3 servidores HPE de alta performance e Storage HPE MSA 2040 com conexão em fibra óptica.",
-      result: "Aumento na segurança, gerenciamento e monitoramento eficiente, agilidade nos processos e atendimento aos clientes, modernização completa da infraestrutura de TI.",
-      tags: ["Virtualização", "Servidores HPE", "Backup Veeam", "Infraestrutura de TI"],
-      image: "/images/productivity-office.jpg",
-      details: "O Supermercado Celeiro é uma instituição importante na comunidade chapecoense há mais de 50 anos. Com a modernização do varejo, a empresa precisava de uma infraestrutura de TI robusta e confiável.\n\nA Inova implementou:\n\n• Virtualização VMWARE para melhor aproveitamento de recursos\n• 3 servidores HPE de alta performance\n• Storage HPE MSA 2040 com conexão em fibra óptica\n• Backup e monitoramento 24/7\n\nA solução garantiu alta disponibilidade dos sistemas, reduzindo riscos de parada operacional e melhorando a eficiência dos processos."
-    },
-    "aurora-tapejara": {
-      client: "AURORA ALIMENTOS",
-      location: "Tapejara - RS",
-      title: "Ampliação e Modernização da Infraestrutura de TI e Energia",
-      description: "O Frigorífico Aurora Tapejara-I (FATA-I) realizou um projeto de ampliação e modernização de sua infraestrutura de TI e energia estabilizada, abrangendo a Captação de Água Bruta e a Estação de Tratamento de Efluentes (ETE). A Inova implementou uma solução completa com redes ópticas em topologia estrela, cabeamento estruturado CAT6A, novos racks de comunicação e distribuição de energia estabilizada via no-breaks com gerenciamento SNMP, garantindo alta disponibilidade para as operações críticas da unidade.",
-      result: "Alta disponibilidade e segurança para as operações críticas da planta, com infraestrutura de rede óptica robusta, cabeamento estruturado de alta performance e energia estabilizada com monitoramento remoto. O projeto preparou a unidade para futuras expansões e garantiu a confiabilidade necessária para o ambiente industrial.",
-      tags: ["Infraestrutura de Rede", "Fibra Óptica", "Energia Estabilizada", "HP Aruba"],
-      image: "/images/aurora-tapejara.png",
-      details: "O Frigorífico Aurora Tapejara-I (FATA-I), parte da Cooperativa Central Aurora Alimentos, é uma unidade industrial de grande porte localizada em Tapejara, RS. Com a ampliação da Estação de Tratamento de Efluentes (ETE) e da Captação de Água Bruta, surgiu a necessidade de modernizar e expandir a infraestrutura de TI e energia estabilizada.\n\nA Inova implementou:\n\n• Rede óptica em topologia estrela com cabos blindados para trechos externos\n• Cabeamento estruturado FTP CAT6A com proteção contra interferências eletromagnéticas\n• Switches HPE Aruba Networking CX 6000 com PoE para câmeras IP e access points\n• No-breaks senoidais online com SNMP e banco de baterias externo para 30 min de autonomia\n• Sistema de CFTV com câmeras IP de alta resolução e NVR de 128 canais\n\nA solução garantiu alta disponibilidade para as operações críticas da planta, com infraestrutura robusta preparada para futuras expansões e monitoramento remoto de toda a rede e energia."
-    },
     "cia-canoinhas": {
       client: "CIA CANOINHAS",
       location: "Canoinhas - SC",
