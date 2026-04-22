@@ -30,7 +30,7 @@ export default function CaseDetail() {
       details: "A Cia Canoinhas de Papel é uma empresa de grande porte com operações complexas e necessidade de segurança patrimonial elevada.\n\nA Inova implementou:\n\n• 40 câmeras IPs de alta resolução\n• Servidor HPE com software Digifort\n• Sala de monitoramento com tela full HD\n• Sistema de gravação com redundância\n\nO projeto centralizou o monitoramento, aumentou a segurança patrimonial e permitiu resposta rápida a incidentes."
     },
 
-  const caseData = casesData[caseId || ""];
+  const casesData = casesData[caseId || ""];
 
   if (!caseData) {
     return (
