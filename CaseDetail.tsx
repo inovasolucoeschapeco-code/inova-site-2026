@@ -29,27 +29,6 @@ export default function CaseDetail() {
       image: "/images/team-support.jpg",
       details: "A Cia Canoinhas de Papel é uma empresa de grande porte com operações complexas e necessidade de segurança patrimonial elevada.\n\nA Inova implementou:\n\n• 40 câmeras IPs de alta resolução\n• Servidor HPE com software Digifort\n• Sala de monitoramento com tela full HD\n• Sistema de gravação com redundância\n\nO projeto centralizou o monitoramento, aumentou a segurança patrimonial e permitiu resposta rápida a incidentes."
     },
-    "irani-mp5": {
-      client: "CELULOSE IRANI S/A",
-      location: "Vargem Bonita - SC",
-      title: "Infraestrutura de Redes e Automação para a Máquina de Papel nº 5",
-      description: "Como parte do Projeto Gaia XI, a Celulose Irani investiu na modernização da Máquina de Papel nº 5 (MP#5) em sua unidade de Vargem Bonita (SC). A Inova foi escolhida para fornecer e executar toda a infraestrutura de redes corporativas (T.I.) e de automação industrial (T.A.) das Salas de Operação e Salas Elétricas.",
-      result: "Uma infraestrutura de rede e automação de altíssima confiabilidade, essencial para o funcionamento ininterrupto da nova MP#5. A segregação entre energia comum e estabilizada (UPS), aliada à redundância das fibras ópticas e certificação de todos os pontos, garantiu a estabilidade necessária para que a Irani alcance suas metas de expansão.",
-      tags: ["Automação Industrial", "Fibra Óptica", "Infraestrutura de Rede", "Projeto Gaia"],
-      image: "/images/irani-vargem-bonita.jpg",
-      details: "A Celulose Irani S/A é uma das principais indústrias nacionais de embalagens sustentáveis de papel e papelão ondulado, com mais de 80 anos de história e produção superior a 317 mil toneladas por ano. Através de sua Plataforma Gaia, a empresa investe continuamente na modernização de suas operações.\n\nO Projeto Gaia XI contemplou a modernização e reforma da Máquina de Papel nº 5 (MP#5) na unidade de Campina da Alegria, em Vargem Bonita (SC). A Inova implementou:\n\n• Lançamento, fusão e certificação de centenas de metros de fibra óptica Furukawa\n• Novo link principal de 210m e anel óptico de 12 pares com redundância total\n• Realocação de 350m de fibra óptica da Rede de Coleta de Dados\n• Racks autoportantes e de parede para redes T.I. e T.A.\n• Switches 24 portas com uplinks SFP e cabeamento certificado\n• Integração com sistemas Siemens, Honeywell e Scanners\n• Energia estabilizada (UPS) segregada e iluminação LED de alta eficiência\n• Certificação completa de todos os pontos ópticos e metálicos\n\nA solução garantiu altíssima confiabilidade para a operação contínua da MP#5, com integração perfeita entre redes corporativas e de automação industrial."
-    },
-    "aurora-ampliacao": {
-      client: "AURORA ALIMENTOS",
-      location: "Tapejara - RS",
-      title: "Infraestrutura de TI para a Nova Indústria de Frango Griller",
-      description: "Com um investimento de R$ 210 milhões, a Aurora Coop modernizou e ampliou o Frigorífico Tapejara-I (FATA-I), transformando-o em uma nova indústria voltada à exportação de frango Griller. Para suportar essa megaoperação de 18,5 mil m², a Inova implementou uma infraestrutura de TI de ponta a ponta.",
-      result: "Uma infraestrutura tecnológica robusta, segura e de alta performance, capaz de suportar o aumento de 80% na capacidade de abate (10 mil aves/hora).",
-      tags: ["Infraestrutura Completa", "Rede Óptica", "CFTV", "Wi-Fi 6"],
-      image: "/images/aurora-ampliacao.png",
-      details: "A Aurora Coop realizou um investimento histórico de R$ 210 milhões na ampliação e modernização do Frigorífico Tapejara-I (FATA-I), no Rio Grande do Sul. A unidade teve 74% de sua estrutura revitalizada e sua área construída ampliada para 18,5 mil m², retornando praticamente como uma nova indústria.\n\nA Inova implementou:\n\n• Rede óptica em topologia estrela com 18 racks distribuídos\n• Switches core HPE Comware 5140 com uplinks 10G\n• Switches de acesso HPE Aruba CX 6000 com PoE\n• Sistema de CFTV IP com NVR Hikvision de 128 canais\n• Access Points Ubiquiti U6-PRO Wi-Fi 6 e Extreme\n• No-breaks senoidais online de 1.2 a 8 KVA com SNMP\n• Cabeamento estruturado CAT6 com infraestrutura em inox\n\nA solução garantiu conectividade ininterrupta, monitoramento centralizado e energia estabilizada para todas as áreas críticas da nova planta industrial, preparando a unidade para faturar R$ 238 milhões anuais com exportações."
-    }
-  };
 
   const caseData = casesData[caseId || ""];
 
