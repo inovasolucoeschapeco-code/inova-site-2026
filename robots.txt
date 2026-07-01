@@ -1,0 +1,13 @@
+# robots.txt - Inova Soluções Tecnológicas
+# https://www.inovainfo.com.br
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.inovainfo.com.br/sitemap.xml
+
+# Bloquear diretório admin
+User-agent: *
+Disallow: /admin/
+Disallow: /assets/
