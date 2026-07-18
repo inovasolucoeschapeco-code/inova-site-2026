@@ -148,7 +148,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 </li>
                 <li className="flex items-center gap-3">
                   <span className="text-primary">✉️</span>
-                  contato@inovainfo.com.br
+                  inova@inovainfo.com.br
                 </li>
               </ul>
             </div>
