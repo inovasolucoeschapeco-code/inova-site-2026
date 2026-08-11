@@ -21,7 +21,7 @@ export default function Home() {
     e.preventDefault();
     setFormStatus("loading");
     try {
-      const response = await fetch("https://inova-site-final.manus.space/api/trpc/leads.submit", {
+      const response = await fetch("https://inovasite-4wzpx2ok.manus.space/api/trpc/leads.submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
