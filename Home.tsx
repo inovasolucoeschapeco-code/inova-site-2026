@@ -1,10 +1,40 @@
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
-import { ArrowRight, Shield, Server, Users, Zap, CheckCircle2, BarChart3 } from "lucide-react";
+import { ArrowRight, Shield, Server, Users, Zap, CheckCircle2, BarChart3, Loader2 } from "lucide-react";
 import { Link } from "wouter";
+import { useState } from "react";
 
 export default function Home() {
   const whatsappLink = "https://wa.me/554933193900";
+  const [formData, setFormData] = useState({ name: "", phone: "", email: "" });
+  const [formStatus, setFormStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+
+  const handleSubmitLead = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setFormStatus("loading");
+    try {
+      const response = await fetch("https://inova-site-final.manus.space/api/trpc/leads.submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          json: {
+            name: formData.name,
+            phone: formData.phone,
+            email: formData.email,
+            origin: "site-inova-cta"
+          }
+        }),
+      });
+      if (response.ok) {
+        setFormStatus("success");
+        setFormData({ name: "", phone: "", email: "" });
+      } else {
+        setFormStatus("error");
+      }
+    } catch {
+      setFormStatus("error");
+    }
+  };
 
   return (
     <Layout>
@@ -350,11 +380,67 @@ export default function Home() {
           <p className="text-xl text-white/80 mb-10 max-w-2xl mx-auto">
             Agende um diagnóstico gratuito e descubra como podemos otimizar sua infraestrutura e reduzir custos.
           </p>
-          <a href={whatsappLink} target="_blank" rel="noreferrer">
-            <Button className="bg-white text-primary hover:bg-gray-100 h-16 px-10 text-base uppercase tracking-widest font-bold rounded-none">
-              Falar com Consultor
-            </Button>
-          </a>
+
+          {formStatus === "success" ? (
+            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-8 max-w-md mx-auto">
+              <CheckCircle2 className="w-12 h-12 text-white mx-auto mb-4" />
+              <p className="text-xl font-bold">Obrigado pelo contato!</p>
+              <p className="text-white/80 mt-2">Entraremos em contato em breve.</p>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmitLead} className="max-w-md mx-auto space-y-4">
+              <input
+                type="text"
+                placeholder="Seu nome"
+                required
+                minLength={2}
+                value={formData.name}
+                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                className="w-full px-4 py-3 rounded-md bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/50"
+              />
+              <input
+                type="tel"
+                placeholder="Seu telefone"
+                required
+                minLength={8}
+                value={formData.phone}
+                onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                className="w-full px-4 py-3 rounded-md bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/50"
+              />
+              <input
+                type="email"
+                placeholder="Seu email"
+                required
+                value={formData.email}
+                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                className="w-full px-4 py-3 rounded-md bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/50"
+              />
+              <button
+                type="submit"
+                disabled={formStatus === "loading"}
+                className="w-full bg-white text-primary hover:bg-gray-100 h-14 px-10 text-base uppercase tracking-widest font-bold rounded-md disabled:opacity-50 flex items-center justify-center gap-2"
+              >
+                {formStatus === "loading" ? (
+                  <>
+                    <Loader2 className="w-5 h-5 animate-spin" />
+                    Enviando...
+                  </>
+                ) : (
+                  "Solicitar Diagnóstico Gratuito"
+                )}
+              </button>
+              {formStatus === "error" && (
+                <p className="text-red-300 text-sm">Erro ao enviar. Tente novamente.</p>
+              )}
+            </form>
+          )}
+
+          <p className="text-white/60 text-sm mt-6">
+            Ou fale diretamente:{" "}
+            <a href={whatsappLink} target="_blank" rel="noreferrer" className="underline hover:text-white">
+              WhatsApp (49) 3319-3900
+            </a>
+          </p>
         </div>
       </section>
     </Layout>
