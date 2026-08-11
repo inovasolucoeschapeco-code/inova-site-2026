@@ -1,13 +1,21 @@
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
-import { ArrowRight, Shield, Server, Users, Zap, CheckCircle2, BarChart3, Loader2 } from "lucide-react";
+import { ArrowRight, Shield, Server, Users, Zap, CheckCircle2, BarChart3, Loader2, X } from "lucide-react";
 import { Link } from "wouter";
 import { useState } from "react";
 
 export default function Home() {
   const whatsappLink = "https://wa.me/554933193900";
+  const [showLeadModal, setShowLeadModal] = useState(false);
   const [formData, setFormData] = useState({ name: "", phone: "", email: "" });
   const [formStatus, setFormStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [ctaOrigin, setCtaOrigin] = useState("site-inova");
+
+  const openLeadForm = (origin: string) => {
+    setCtaOrigin(origin);
+    setShowLeadModal(true);
+    setFormStatus("idle");
+  };
 
   const handleSubmitLead = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -21,13 +29,19 @@ export default function Home() {
             name: formData.name,
             phone: formData.phone,
             email: formData.email,
-            origin: "site-inova-cta"
+            origin: ctaOrigin
           }
         }),
       });
       if (response.ok) {
         setFormStatus("success");
         setFormData({ name: "", phone: "", email: "" });
+        // Redirecionar para WhatsApp após 2 segundos
+        setTimeout(() => {
+          window.open(whatsappLink, "_blank");
+          setShowLeadModal(false);
+          setFormStatus("idle");
+        }, 2000);
       } else {
         setFormStatus("error");
       }
@@ -38,6 +52,78 @@ export default function Home() {
 
   return (
     <Layout>
+      {/* Lead Capture Modal */}
+      {showLeadModal && (
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
+          <div className="bg-white rounded-xl shadow-2xl w-full max-w-md relative animate-in fade-in zoom-in-95 duration-200">
+            <button
+              onClick={() => setShowLeadModal(false)}
+              className="absolute top-4 right-4 text-gray-400 hover:text-gray-700 transition-colors"
+            >
+              <X className="w-5 h-5" />
+            </button>
+
+            {formStatus === "success" ? (
+              <div className="p-8 text-center">
+                <CheckCircle2 className="w-16 h-16 text-emerald-500 mx-auto mb-4" />
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Obrigado!</h3>
+                <p className="text-gray-600">Redirecionando para o WhatsApp...</p>
+              </div>
+            ) : (
+              <div className="p-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Fale com um Consultor</h3>
+                <p className="text-gray-600 mb-6 text-sm">Preencha seus dados e você será redirecionado para nosso WhatsApp.</p>
+                <form onSubmit={handleSubmitLead} className="space-y-4">
+                  <input
+                    type="text"
+                    placeholder="Seu nome"
+                    required
+                    minLength={2}
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    className="w-full px-4 py-3 rounded-lg border border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                  />
+                  <input
+                    type="tel"
+                    placeholder="Seu telefone"
+                    required
+                    minLength={8}
+                    value={formData.phone}
+                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                    className="w-full px-4 py-3 rounded-lg border border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                  />
+                  <input
+                    type="email"
+                    placeholder="Seu email"
+                    required
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    className="w-full px-4 py-3 rounded-lg border border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                  />
+                  <button
+                    type="submit"
+                    disabled={formStatus === "loading"}
+                    className="w-full bg-emerald-600 hover:bg-emerald-700 text-white h-12 rounded-lg text-sm uppercase tracking-widest font-bold disabled:opacity-50 flex items-center justify-center gap-2 transition-colors"
+                  >
+                    {formStatus === "loading" ? (
+                      <>
+                        <Loader2 className="w-4 h-4 animate-spin" />
+                        Enviando...
+                      </>
+                    ) : (
+                      "Enviar e Falar no WhatsApp"
+                    )}
+                  </button>
+                  {formStatus === "error" && (
+                    <p className="text-red-500 text-sm text-center">Erro ao enviar. Tente novamente.</p>
+                  )}
+                </form>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center bg-foreground text-background overflow-hidden">
         {/* Background Image with Overlay */}
@@ -72,11 +158,9 @@ export default function Home() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href={whatsappLink} target="_blank" rel="noreferrer">
-                <Button className="bg-primary hover:bg-primary/90 text-white h-14 px-8 text-sm uppercase tracking-widest font-bold rounded-none border border-transparent hover:border-white/20 transition-all">
-                  Falar com Consultor
-                </Button>
-              </a>
+              <Button onClick={() => openLeadForm("hero-falar-consultor")} className="bg-primary hover:bg-primary/90 text-white h-14 px-8 text-sm uppercase tracking-widest font-bold rounded-none border border-transparent hover:border-white/20 transition-all">
+                Falar com Consultor
+              </Button>
               <Link href="/solucoes">
                 <Button variant="outline" className="h-14 px-8 text-sm uppercase tracking-widest font-bold rounded-none border-white/20 text-white hover:bg-white hover:text-foreground transition-all">
                   Conhecer Soluções
@@ -150,9 +234,7 @@ export default function Home() {
                   <li className="flex items-center gap-2 text-sm font-medium"><CheckCircle2 className="w-4 h-4 text-primary" /> Redes Wi-Fi Corporativas</li>
                   <li className="flex items-center gap-2 text-sm font-medium"><CheckCircle2 className="w-4 h-4 text-primary" /> Servidores e Storages</li>
                 </ul>
-                <a href={whatsappLink} target="_blank" rel="noreferrer">
-                  <Button variant="outline" className="w-full border-border hover:border-primary hover:text-primary uppercase text-xs font-bold tracking-widest rounded-none">Solicitar Orçamento</Button>
-                </a>
+                <Button onClick={() => openLeadForm("pilar-infraestrutura")} variant="outline" className="w-full border-border hover:border-primary hover:text-primary uppercase text-xs font-bold tracking-widest rounded-none">Solicitar Orçamento</Button>
               </div>
             </div>
 
@@ -176,9 +258,7 @@ export default function Home() {
                   <li className="flex items-center gap-2 text-sm font-medium"><CheckCircle2 className="w-4 h-4 text-primary" /> Cloud Backup</li>
                   <li className="flex items-center gap-2 text-sm font-medium"><CheckCircle2 className="w-4 h-4 text-primary" /> CFTV e Controle de Acesso</li>
                 </ul>
-                <a href={whatsappLink} target="_blank" rel="noreferrer">
-                  <Button variant="outline" className="w-full border-border hover:border-primary hover:text-primary uppercase text-xs font-bold tracking-widest rounded-none">Solicitar Orçamento</Button>
-                </a>
+                <Button onClick={() => openLeadForm("pilar-seguranca")} variant="outline" className="w-full border-border hover:border-primary hover:text-primary uppercase text-xs font-bold tracking-widest rounded-none">Solicitar Orçamento</Button>
               </div>
             </div>
 
@@ -202,9 +282,7 @@ export default function Home() {
                   <li className="flex items-center gap-2 text-sm font-medium"><CheckCircle2 className="w-4 h-4 text-primary" /> Venda de Desktops e Notebooks</li>
                   <li className="flex items-center gap-2 text-sm font-medium"><CheckCircle2 className="w-4 h-4 text-primary" /> Videoconferência</li>
                 </ul>
-                <a href={whatsappLink} target="_blank" rel="noreferrer">
-                  <Button variant="outline" className="w-full border-border hover:border-primary hover:text-primary uppercase text-xs font-bold tracking-widest rounded-none">Solicitar Orçamento</Button>
-                </a>
+                <Button onClick={() => openLeadForm("pilar-produtividade")} variant="outline" className="w-full border-border hover:border-primary hover:text-primary uppercase text-xs font-bold tracking-widest rounded-none">Solicitar Orçamento</Button>
               </div>
             </div>
 
@@ -228,9 +306,7 @@ export default function Home() {
                   <li className="flex items-center gap-2 text-sm font-medium"><CheckCircle2 className="w-4 h-4 text-primary" /> Suporte Técnico Dedicado</li>
                   <li className="flex items-center gap-2 text-sm font-medium"><CheckCircle2 className="w-4 h-4 text-primary" /> Monitoramento de Rede</li>
                 </ul>
-                <a href={whatsappLink} target="_blank" rel="noreferrer">
-                  <Button variant="outline" className="w-full border-border hover:border-primary hover:text-primary uppercase text-xs font-bold tracking-widest rounded-none">Solicitar Orçamento</Button>
-                </a>
+                <Button onClick={() => openLeadForm("pilar-suporte")} variant="outline" className="w-full border-border hover:border-primary hover:text-primary uppercase text-xs font-bold tracking-widest rounded-none">Solicitar Orçamento</Button>
               </div>
             </div>
           </div>
@@ -275,11 +351,9 @@ export default function Home() {
                 </div>
               </div>
 
-              <a href={whatsappLink} target="_blank" rel="noreferrer">
-                <Button className="mt-10 bg-primary hover:bg-primary/90 text-white h-12 px-8 text-sm uppercase tracking-widest font-bold rounded-none">
-                  Falar com Consultor
-                </Button>
-              </a>
+              <Button onClick={() => openLeadForm("terceirizacao-ti")} className="mt-10 bg-primary hover:bg-primary/90 text-white h-12 px-8 text-sm uppercase tracking-widest font-bold rounded-none">
+                Falar com Consultor
+              </Button>
             </div>
             
             <div className="relative">
@@ -315,7 +389,6 @@ export default function Home() {
           <h2 className="font-display font-bold text-3xl mb-12 text-foreground">EMPRESAS QUE CONFIAM NA INOVA</h2>
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
-            {/* Logos reais dos clientes */}
             {[
               { nome: "DASS", logo: "/logos/dass.jpg" },
               { nome: "Aurora Alimentos", logo: "/logos/aurora.png" },
@@ -380,67 +453,9 @@ export default function Home() {
           <p className="text-xl text-white/80 mb-10 max-w-2xl mx-auto">
             Agende um diagnóstico gratuito e descubra como podemos otimizar sua infraestrutura e reduzir custos.
           </p>
-
-          {formStatus === "success" ? (
-            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-8 max-w-md mx-auto">
-              <CheckCircle2 className="w-12 h-12 text-white mx-auto mb-4" />
-              <p className="text-xl font-bold">Obrigado pelo contato!</p>
-              <p className="text-white/80 mt-2">Entraremos em contato em breve.</p>
-            </div>
-          ) : (
-            <form onSubmit={handleSubmitLead} className="max-w-md mx-auto space-y-4">
-              <input
-                type="text"
-                placeholder="Seu nome"
-                required
-                minLength={2}
-                value={formData.name}
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="w-full px-4 py-3 rounded-md bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/50"
-              />
-              <input
-                type="tel"
-                placeholder="Seu telefone"
-                required
-                minLength={8}
-                value={formData.phone}
-                onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                className="w-full px-4 py-3 rounded-md bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/50"
-              />
-              <input
-                type="email"
-                placeholder="Seu email"
-                required
-                value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="w-full px-4 py-3 rounded-md bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/50"
-              />
-              <button
-                type="submit"
-                disabled={formStatus === "loading"}
-                className="w-full bg-white text-primary hover:bg-gray-100 h-14 px-10 text-base uppercase tracking-widest font-bold rounded-md disabled:opacity-50 flex items-center justify-center gap-2"
-              >
-                {formStatus === "loading" ? (
-                  <>
-                    <Loader2 className="w-5 h-5 animate-spin" />
-                    Enviando...
-                  </>
-                ) : (
-                  "Solicitar Diagnóstico Gratuito"
-                )}
-              </button>
-              {formStatus === "error" && (
-                <p className="text-red-300 text-sm">Erro ao enviar. Tente novamente.</p>
-              )}
-            </form>
-          )}
-
-          <p className="text-white/60 text-sm mt-6">
-            Ou fale diretamente:{" "}
-            <a href={whatsappLink} target="_blank" rel="noreferrer" className="underline hover:text-white">
-              WhatsApp (49) 3319-3900
-            </a>
-          </p>
+          <Button onClick={() => openLeadForm("cta-final")} className="bg-white text-primary hover:bg-gray-100 h-16 px-10 text-base uppercase tracking-widest font-bold rounded-none">
+            Falar com Consultor
+          </Button>
         </div>
       </section>
     </Layout>
